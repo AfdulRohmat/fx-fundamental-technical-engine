@@ -105,3 +105,29 @@ Verdict: `RESEARCH_INCONCLUSIVE`.
 - Telegram, demo EA, and live-money execution remain unauthorized.
 - Continuing F2_T3 requires a new exploratory contract and genuinely new data;
   current validation results cannot be reused as confirmation evidence.
+
+## Phase 08 - cut losses and let winners run
+
+Status: `NO_PROMOTION`; locked test not authorized.
+
+- Registered one new exit candidate before opening no-target paths. All data
+  before 2025-08-28 became development because the earlier validation result
+  informed this hypothesis.
+- Kept F2_T3 entries, one-ATR hard stop, costs, news blackout, bias rules, and
+  portfolio constraints unchanged. Removed the fixed target and exited at the
+  next M15 open after a completed close invalidated London VWAP.
+- E1 improved expectancy from -0.1193R to -0.0266R across 839 trades and reduced
+  average loss from -1.1158R to -0.8118R, but it remained net negative.
+- The payoff became strongly right-skewed: maximum winner +20.16R. Of 206 trades
+  reaching +2R, 72.82% reached +3R and 41.75% reached +5R before exit.
+- The gross price result after spread but before commission was +74.90R;
+  -97.20R commission reduced it to -22.30R net.
+- Only EURUSD and USDCAD were positive; only 2024 and the partial 2025 period
+  were positive. Maximum drawdown was 103.96R and the block-bootstrap interval
+  was [-0.2277R, +0.1040R].
+- Two-point slippage produced -0.0766R/trade, five points produced
+  -0.1834R/trade, and a one-bar exit delay remained negative at -0.0205R/trade.
+- Deterministic replay reproduced the primary ledger SHA-256
+  `a199bb8be1bfb51aac46071d61010867a31cb644733349e820c0db6fdeca6f8e`.
+- No locked observation was loaded, zero locked runs were consumed, and no
+  candidate freeze was created.

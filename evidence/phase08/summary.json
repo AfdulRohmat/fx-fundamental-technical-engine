@@ -1,0 +1,716 @@
+{
+  "assessment": {
+    "calendar_year_metrics": {
+      "2021": {
+        "average_loss_r": -0.8137023160878744,
+        "average_win_r": 3.052839675602727,
+        "commission_r": 11.599765864278355,
+        "estimated_spread_r": 1.396031749856712,
+        "exit_reasons": {
+          "ROLLOVER_FLAT": 4,
+          "STOP": 39,
+          "VWAP_INVALIDATION": 51
+        },
+        "expectancy_r": -0.07330065810456762,
+        "maximum_drawdown_r": 24.537207672012713,
+        "maximum_winner_r": 11.866232354016788,
+        "median_holding_hours": 0.5,
+        "median_loss_holding_hours": 0.25,
+        "median_winner_holding_hours": 4.875,
+        "net_r": -6.890261861829357,
+        "net_r_percentiles": {
+          "50": -0.6892831541216782,
+          "90": 1.269225136218692,
+          "95": 3.4749002558413222,
+          "99": 9.184514726862965
+        },
+        "path": {
+          "continuation_after_2r": {
+            "hit_3r_given_2r": 0.8421052631578947,
+            "hit_4r_given_2r": 0.5789473684210527,
+            "hit_5r_given_2r": 0.5263157894736842
+          },
+          "hit_2r_count": 19,
+          "hit_2r_fraction": 0.20212765957446807,
+          "median_giveback_r": 1.0279488754833546,
+          "median_mae_r": 0.8659161551013455,
+          "median_mfe_r": 0.5371733529627414
+        },
+        "price_r_before_commission": 4.709504002449,
+        "profit_factor": 0.8885816858392257,
+        "return_skew": 3.622527344293361,
+        "top_5pct_positive_profit_share": 0.713499771325823,
+        "trades": 94,
+        "win_rate": 0.19148936170212766
+      },
+      "2022": {
+        "average_loss_r": -0.803505800257565,
+        "average_win_r": 2.1498043202265866,
+        "commission_r": 23.76236009239185,
+        "estimated_spread_r": 1.9250664817958585,
+        "exit_reasons": {
+          "ROLLOVER_FLAT": 10,
+          "STOP": 95,
+          "VWAP_INVALIDATION": 149
+        },
+        "expectancy_r": -0.105873488332175,
+        "maximum_drawdown_r": 40.171092286802136,
+        "maximum_winner_r": 13.309333333333203,
+        "median_holding_hours": 0.5,
+        "median_loss_holding_hours": 0.5,
+        "median_winner_holding_hours": 4.875,
+        "net_r": -26.89186603637245,
+        "net_r_percentiles": {
+          "50": -0.6854330155081156,
+          "90": 1.2324648103763591,
+          "95": 3.3387233324264707,
+          "99": 7.59537950045984
+        },
+        "path": {
+          "continuation_after_2r": {
+            "hit_3r_given_2r": 0.6349206349206349,
+            "hit_4r_given_2r": 0.49206349206349204,
+            "hit_5r_given_2r": 0.3968253968253968
+          },
+          "hit_2r_count": 63,
+          "hit_2r_fraction": 0.24803149606299213,
+          "median_giveback_r": 1.2633237580995849,
+          "median_mae_r": 0.814652610305237,
+          "median_mfe_r": 0.6071001196650958
+        },
+        "price_r_before_commission": -3.1295059439805994,
+        "profit_factor": 0.8274836770034093,
+        "return_skew": 3.9659840807935964,
+        "top_5pct_positive_profit_share": 0.6437336903945827,
+        "trades": 254,
+        "win_rate": 0.23622047244094488
+      },
+      "2023": {
+        "average_loss_r": -0.8419555317733733,
+        "average_win_r": 3.408449758772246,
+        "commission_r": 18.002647982289517,
+        "estimated_spread_r": 4.195581385946499,
+        "exit_reasons": {
+          "BIAS_FLIP": 1,
+          "ROLLOVER_FLAT": 3,
+          "STOP": 68,
+          "VWAP_INVALIDATION": 89
+        },
+        "expectancy_r": -0.18195471026007845,
+        "maximum_drawdown_r": 40.52077306986797,
+        "maximum_winner_r": 16.127110228400944,
+        "median_holding_hours": 0.5,
+        "median_loss_holding_hours": 0.5,
+        "median_winner_holding_hours": 4.5,
+        "net_r": -29.29470835187263,
+        "net_r_percentiles": {
+          "50": -0.7697989439377888,
+          "90": 0.9933481152992892,
+          "95": 3.1095137273367404,
+          "99": 10.248447265908673
+        },
+        "path": {
+          "continuation_after_2r": {
+            "hit_3r_given_2r": 0.78125,
+            "hit_4r_given_2r": 0.5625,
+            "hit_5r_given_2r": 0.5
+          },
+          "hit_2r_count": 32,
+          "hit_2r_fraction": 0.19875776397515527,
+          "median_giveback_r": 1.247524752475245,
+          "median_mae_r": 0.8730158730157719,
+          "median_mfe_r": 0.5237676056337662
+        },
+        "price_r_before_commission": -11.292060369583117,
+        "profit_factor": 0.7441643184652651,
+        "return_skew": 4.72440609924669,
+        "top_5pct_positive_profit_share": 0.7750761215565116,
+        "trades": 161,
+        "win_rate": 0.15527950310559005
+      },
+      "2024": {
+        "average_loss_r": -0.8286885143579761,
+        "average_win_r": 2.585569247366663,
+        "commission_r": 32.053488306645264,
+        "estimated_spread_r": 4.028391847097649,
+        "exit_reasons": {
+          "BIAS_FLIP": 1,
+          "ROLLOVER_FLAT": 14,
+          "STOP": 73,
+          "VWAP_INVALIDATION": 123
+        },
+        "expectancy_r": 0.1260091536124207,
+        "maximum_drawdown_r": 35.60230701795386,
+        "maximum_winner_r": 20.158798283262318,
+        "median_holding_hours": 0.75,
+        "median_loss_holding_hours": 0.5,
+        "median_winner_holding_hours": 4.25,
+        "net_r": 26.58793141222077,
+        "net_r_percentiles": {
+          "50": -0.5691056910567647,
+          "90": 1.9451473955562586,
+          "95": 3.564934994097884,
+          "99": 11.756548856550411
+        },
+        "path": {
+          "continuation_after_2r": {
+            "hit_3r_given_2r": 0.7301587301587301,
+            "hit_4r_given_2r": 0.5238095238095238,
+            "hit_5r_given_2r": 0.3333333333333333
+          },
+          "hit_2r_count": 63,
+          "hit_2r_fraction": 0.2985781990521327,
+          "median_giveback_r": 1.2902270483711133,
+          "median_mae_r": 0.7508650519032063,
+          "median_mfe_r": 0.8063801506426023
+        },
+        "price_r_before_commission": 58.64141971886602,
+        "profit_factor": 1.211081242668976,
+        "return_skew": 4.450995918865111,
+        "top_5pct_positive_profit_share": 0.6616325025594316,
+        "trades": 211,
+        "win_rate": 0.2796208530805687
+      },
+      "2025": {
+        "average_loss_r": -0.7528832852185988,
+        "average_win_r": 2.594806930778737,
+        "commission_r": 11.780852581843483,
+        "estimated_spread_r": 1.3600866675080563,
+        "exit_reasons": {
+          "BIAS_FLIP": 1,
+          "ROLLOVER_FLAT": 5,
+          "STOP": 36,
+          "VWAP_INVALIDATION": 77
+        },
+        "expectancy_r": 0.1192040819739845,
+        "maximum_drawdown_r": 15.309820498348223,
+        "maximum_winner_r": 9.519492101462744,
+        "median_holding_hours": 0.75,
+        "median_loss_holding_hours": 0.5,
+        "median_winner_holding_hours": 4.25,
+        "net_r": 14.185285754904156,
+        "net_r_percentiles": {
+          "50": -0.476715072608912,
+          "90": 1.6239489955196562,
+          "95": 6.209898097657363,
+          "99": 9.423393254758704
+        },
+        "path": {
+          "continuation_after_2r": {
+            "hit_3r_given_2r": 0.7931034482758621,
+            "hit_4r_given_2r": 0.6896551724137931,
+            "hit_5r_given_2r": 0.4827586206896552
+          },
+          "hit_2r_count": 29,
+          "hit_2r_fraction": 0.24369747899159663,
+          "median_giveback_r": 1.2378589827123563,
+          "median_mae_r": 0.6801261829652574,
+          "median_mfe_r": 0.88841882601796
+        },
+        "price_r_before_commission": 25.966138336747637,
+        "profit_factor": 1.214105469197923,
+        "return_skew": 3.052035643226358,
+        "top_5pct_positive_profit_share": 0.6138324069415896,
+        "trades": 119,
+        "win_rate": 0.2605042016806723
+      }
+    },
+    "candidate_metrics": {
+      "average_loss_r": -0.8118294688474827,
+      "average_win_r": 2.6017524237954635,
+      "commission_r": 97.19911482744848,
+      "estimated_spread_r": 12.905158132204773,
+      "exit_reasons": {
+        "BIAS_FLIP": 3,
+        "ROLLOVER_FLAT": 36,
+        "STOP": 311,
+        "VWAP_INVALIDATION": 489
+      },
+      "expectancy_r": -0.026583574592311702,
+      "maximum_drawdown_r": 103.95676119149957,
+      "maximum_winner_r": 20.158798283262318,
+      "median_holding_hours": 0.5,
+      "median_loss_holding_hours": 0.5,
+      "median_winner_holding_hours": 4.5,
+      "net_r": -22.303619082949517,
+      "net_r_percentiles": {
+        "50": -0.6573515666100753,
+        "90": 1.5242532243274285,
+        "95": 3.548281116466684,
+        "99": 10.168009909159757
+      },
+      "path": {
+        "continuation_after_2r": {
+          "hit_3r_given_2r": 0.7281553398058253,
+          "hit_4r_given_2r": 0.5485436893203883,
+          "hit_5r_given_2r": 0.4174757281553398
+        },
+        "hit_2r_count": 206,
+        "hit_2r_fraction": 0.24553039332538737,
+        "median_giveback_r": 1.247524752475245,
+        "median_mae_r": 0.803532008829978,
+        "median_mfe_r": 0.6540404040403498
+      },
+      "price_r_before_commission": 74.89549574449893,
+      "profit_factor": 0.957471701312332,
+      "return_skew": 4.214432694424058,
+      "top_5pct_positive_profit_share": 0.6670403626193272,
+      "trades": 839,
+      "win_rate": 0.2300357568533969
+    },
+    "control_metrics": {
+      "average_loss_r": -1.115772486891396,
+      "average_win_r": 1.869971741547628,
+      "commission_r": 97.0554254833828,
+      "estimated_spread_r": 12.861142983464468,
+      "exit_reasons": {
+        "ROLLOVER_FLAT": 4,
+        "STOP": 557,
+        "TARGET": 278
+      },
+      "expectancy_r": -0.1193381794266443,
+      "maximum_drawdown_r": 131.18472946993825,
+      "maximum_winner_r": 1.9879965199163576,
+      "median_holding_hours": 0.75,
+      "median_loss_holding_hours": 0.5,
+      "median_winner_holding_hours": 1.0,
+      "net_r": -100.12473253895458,
+      "net_r_percentiles": {
+        "50": -1.0732984293194403,
+        "90": 1.9162680811755066,
+        "95": 1.935722397678082,
+        "99": 1.9535484534315788
+      },
+      "price_r_before_commission": -3.069307055571741,
+      "profit_factor": 0.8394708475052878,
+      "return_skew": 0.6809249280475096,
+      "top_5pct_positive_profit_share": 0.15633664844788958,
+      "trades": 839,
+      "win_rate": 0.33373063170441003
+    },
+    "eligible_for_locked_test": false,
+    "entry_set_comparison": {
+      "candidate_only": 6,
+      "control_only": 6,
+      "control_overlap_fraction": 0.9928486293206198,
+      "overlap": 833
+    },
+    "expectancy_block_bootstrap_95_ci_r": [
+      -0.227747508719883,
+      0.1040306427479763
+    ],
+    "incremental_expectancy_r": 0.09275460483433261,
+    "one_bar_exit_delay_metrics": {
+      "average_loss_r": -1.0384686001486363,
+      "average_win_r": 2.39052755559545,
+      "commission_r": 96.33856133553373,
+      "estimated_spread_r": 12.99706730767689,
+      "exit_reasons": {
+        "BIAS_FLIP": 3,
+        "ROLLOVER_FLAT": 46,
+        "STOP": 532,
+        "VWAP_INVALIDATION_DELAY_1": 251
+      },
+      "expectancy_r": -0.020485366412110812,
+      "maximum_drawdown_r": 101.06114825211753,
+      "maximum_winner_r": 20.158798283262318,
+      "median_holding_hours": 0.75,
+      "median_loss_holding_hours": 0.5,
+      "median_winner_holding_hours": 2.75,
+      "net_r": -17.043824854876195,
+      "net_r_percentiles": {
+        "50": -1.0725393499752651,
+        "90": 1.9659323451586885,
+        "95": 4.708112978327743,
+        "99": 10.24122966164161
+      },
+      "path": {
+        "continuation_after_2r": {
+          "hit_3r_given_2r": 0.7285714285714285,
+          "hit_4r_given_2r": 0.5476190476190477,
+          "hit_5r_given_2r": 0.4142857142857143
+        },
+        "hit_2r_count": 210,
+        "hit_2r_fraction": 0.25240384615384615,
+        "median_giveback_r": 1.254164348748552,
+        "median_mae_r": 0.9999999999999405,
+        "median_mfe_r": 0.7189442257418701
+      },
+      "price_r_before_commission": 79.29473648065752,
+      "profit_factor": 0.9719445120078753,
+      "return_skew": 3.645053521007597,
+      "top_5pct_positive_profit_share": 0.5869989918811799,
+      "trades": 832,
+      "win_rate": 0.296875
+    },
+    "pair_metrics": {
+      "AUDUSD": {
+        "average_loss_r": -0.7736840881677095,
+        "average_win_r": 2.1852726337148343,
+        "commission_r": 15.767213418991094,
+        "estimated_spread_r": 2.235139536149921,
+        "exit_reasons": {
+          "ROLLOVER_FLAT": 4,
+          "STOP": 39,
+          "VWAP_INVALIDATION": 83
+        },
+        "expectancy_r": -0.06917058295757995,
+        "maximum_drawdown_r": 14.009494326264775,
+        "maximum_winner_r": 13.874840357598979,
+        "median_holding_hours": 0.5,
+        "median_loss_holding_hours": 0.5,
+        "median_winner_holding_hours": 3.375,
+        "net_r": -8.715493452655075,
+        "net_r_percentiles": {
+          "50": -0.5967227713954653,
+          "90": 0.9696470306225886,
+          "95": 2.823454088284662,
+          "99": 11.846044943820115
+        },
+        "path": {
+          "continuation_after_2r": {
+            "hit_3r_given_2r": 0.6451612903225806,
+            "hit_4r_given_2r": 0.3548387096774194,
+            "hit_5r_given_2r": 0.25806451612903225
+          },
+          "hit_2r_count": 31,
+          "hit_2r_fraction": 0.24603174603174602,
+          "median_giveback_r": 1.3061212814646335,
+          "median_mae_r": 0.7716463186277929,
+          "median_mfe_r": 0.6904541843005245
+        },
+        "price_r_before_commission": 7.051719966336016,
+        "profit_factor": 0.882657028210532,
+        "return_skew": 4.829311044785139,
+        "top_5pct_positive_profit_share": 0.7398077318604509,
+        "trades": 126,
+        "win_rate": 0.23809523809523808
+      },
+      "EURUSD": {
+        "average_loss_r": -0.8719461114867202,
+        "average_win_r": 2.98672823354363,
+        "commission_r": 19.26972794612806,
+        "estimated_spread_r": 0.7050359712230203,
+        "exit_reasons": {
+          "BIAS_FLIP": 1,
+          "ROLLOVER_FLAT": 8,
+          "STOP": 79,
+          "VWAP_INVALIDATION": 85
+        },
+        "expectancy_r": 0.06484187979232435,
+        "maximum_drawdown_r": 34.66997391660447,
+        "maximum_winner_r": 20.158798283262318,
+        "median_holding_hours": 0.5,
+        "median_loss_holding_hours": 0.25,
+        "median_winner_holding_hours": 4.25,
+        "net_r": 11.217645204072113,
+        "net_r_percentiles": {
+          "50": -0.788873038516501,
+          "90": 1.9073834704269295,
+          "95": 3.7558045503517743,
+          "99": 13.075590863953378
+        },
+        "path": {
+          "continuation_after_2r": {
+            "hit_3r_given_2r": 0.62,
+            "hit_4r_given_2r": 0.5,
+            "hit_5r_given_2r": 0.4
+          },
+          "hit_2r_count": 50,
+          "hit_2r_fraction": 0.28901734104046245,
+          "median_giveback_r": 1.2683760683761365,
+          "median_mae_r": 0.9012875536479914,
+          "median_mfe_r": 0.6055045871562612
+        },
+        "price_r_before_commission": 30.487373150200163,
+        "profit_factor": 1.0982066188406896,
+        "return_skew": 4.67565256524326,
+        "top_5pct_positive_profit_share": 0.693793819679814,
+        "trades": 173,
+        "win_rate": 0.24277456647398843
+      },
+      "GBPUSD": {
+        "average_loss_r": -0.8306528995919134,
+        "average_win_r": 2.0374847076511187,
+        "commission_r": 10.571872943913682,
+        "estimated_spread_r": 1.33533369860816,
+        "exit_reasons": {
+          "BIAS_FLIP": 1,
+          "ROLLOVER_FLAT": 3,
+          "STOP": 65,
+          "VWAP_INVALIDATION": 70
+        },
+        "expectancy_r": -0.25289856144223777,
+        "maximum_drawdown_r": 46.695980497129725,
+        "maximum_winner_r": 6.767482517482368,
+        "median_holding_hours": 0.5,
+        "median_loss_holding_hours": 0.5,
+        "median_winner_holding_hours": 3.875,
+        "net_r": -35.15290004047105,
+        "net_r_percentiles": {
+          "50": -0.894064613072885,
+          "90": 1.0586490647953941,
+          "95": 3.15100762970504,
+          "99": 6.35940154522542
+        },
+        "path": {
+          "continuation_after_2r": {
+            "hit_3r_given_2r": 0.78125,
+            "hit_4r_given_2r": 0.53125,
+            "hit_5r_given_2r": 0.375
+          },
+          "hit_2r_count": 32,
+          "hit_2r_fraction": 0.2302158273381295,
+          "median_giveback_r": 1.2779156327543322,
+          "median_mae_r": 0.9396610169492081,
+          "median_mfe_r": 0.7103321033211009
+        },
+        "price_r_before_commission": -24.58102709655737,
+        "profit_factor": 0.6187423250879122,
+        "return_skew": 3.025145316488215,
+        "top_5pct_positive_profit_share": 0.675414262303283,
+        "trades": 139,
+        "win_rate": 0.2014388489208633
+      },
+      "USDCAD": {
+        "average_loss_r": -0.8647115043919548,
+        "average_win_r": 3.0547286915627963,
+        "commission_r": 33.461581326068185,
+        "estimated_spread_r": 7.823682609803464,
+        "exit_reasons": {
+          "BIAS_FLIP": 1,
+          "ROLLOVER_FLAT": 9,
+          "STOP": 72,
+          "VWAP_INVALIDATION": 119
+        },
+        "expectancy_r": 0.0907739165124371,
+        "maximum_drawdown_r": 21.327528878026673,
+        "maximum_winner_r": 14.527239633094183,
+        "median_holding_hours": 0.5,
+        "median_loss_holding_hours": 0.5,
+        "median_winner_holding_hours": 5.25,
+        "net_r": 18.245557218999856,
+        "net_r_percentiles": {
+          "50": -0.6463062995255486,
+          "90": 2.1766931767487985,
+          "95": 4.036323335906444,
+          "99": 11.866232354016788
+        },
+        "path": {
+          "continuation_after_2r": {
+            "hit_3r_given_2r": 0.8448275862068966,
+            "hit_4r_given_2r": 0.6896551724137931,
+            "hit_5r_given_2r": 0.5
+          },
+          "hit_2r_count": 58,
+          "hit_2r_fraction": 0.2885572139303483,
+          "median_giveback_r": 1.3424741716950919,
+          "median_mae_r": 0.7724137931036811,
+          "median_mfe_r": 0.6572769953051026
+        },
+        "price_r_before_commission": 51.70713854506805,
+        "profit_factor": 1.1388168886867327,
+        "return_skew": 3.381420197300297,
+        "top_5pct_positive_profit_share": 0.637620598460721,
+        "trades": 201,
+        "win_rate": 0.24378109452736318
+      },
+      "USDJPY": {
+        "average_loss_r": -0.7199013031047048,
+        "average_win_r": 2.3728676198054224,
+        "commission_r": 18.12871919234744,
+        "estimated_spread_r": 0.8059663164202082,
+        "exit_reasons": {
+          "ROLLOVER_FLAT": 12,
+          "STOP": 56,
+          "VWAP_INVALIDATION": 132
+        },
+        "expectancy_r": -0.03949214006447679,
+        "maximum_drawdown_r": 42.595807014312115,
+        "maximum_winner_r": 9.467871494264713,
+        "median_holding_hours": 0.5,
+        "median_loss_holding_hours": 0.5,
+        "median_winner_holding_hours": 4.75,
+        "net_r": -7.898428012895357,
+        "net_r_percentiles": {
+          "50": -0.5619302068510786,
+          "90": 1.3038422475971827,
+          "95": 3.632803158018496,
+          "99": 8.985046064498036
+        },
+        "path": {
+          "continuation_after_2r": {
+            "hit_3r_given_2r": 0.7142857142857143,
+            "hit_4r_given_2r": 0.5714285714285714,
+            "hit_5r_given_2r": 0.4857142857142857
+          },
+          "hit_2r_count": 35,
+          "hit_2r_fraction": 0.175,
+          "median_giveback_r": 1.0258063173087835,
+          "median_mae_r": 0.7078563411896714,
+          "median_mfe_r": 0.5632018201967417
+        },
+        "price_r_before_commission": 10.230291179452083,
+        "profit_factor": 0.9296695969541156,
+        "return_skew": 3.366030630664167,
+        "top_5pct_positive_profit_share": 0.6835831848170897,
+        "trades": 200,
+        "win_rate": 0.22
+      }
+    },
+    "positive_calendar_year_count": 2,
+    "positive_pair_count": 2,
+    "promotion_checks": {
+      "drawdown": false,
+      "five_point_slippage": false,
+      "improves_control": true,
+      "minimum_development_trades": true,
+      "one_bar_exit_delay": false,
+      "pair_concentration": false,
+      "positive_bootstrap_lower_bound": false,
+      "positive_calendar_years": false,
+      "positive_expectancy": false,
+      "positive_pairs": false,
+      "two_point_slippage": false
+    },
+    "single_pair_positive_profit_share_max": 0.6192659221834003,
+    "slippage_stress_metrics": {
+      "2": {
+        "average_loss_r": -0.8491523566412378,
+        "average_win_r": 2.654272473147835,
+        "commission_r": 97.19924698774413,
+        "estimated_spread_r": 12.905158132204773,
+        "exit_reasons": {
+          "BIAS_FLIP": 3,
+          "ROLLOVER_FLAT": 36,
+          "STOP": 323,
+          "VWAP_INVALIDATION": 477
+        },
+        "expectancy_r": -0.0766450938152802,
+        "maximum_drawdown_r": 126.46988437912695,
+        "maximum_winner_r": 20.03862660944312,
+        "median_holding_hours": 0.5,
+        "median_loss_holding_hours": 0.5,
+        "median_winner_holding_hours": 4.75,
+        "net_r": -64.3052337110201,
+        "net_r_percentiles": {
+          "50": -0.7200956937799371,
+          "90": 1.492945731010794,
+          "95": 3.494376454763607,
+          "99": 10.07178332128692
+        },
+        "path": {
+          "continuation_after_2r": {
+            "hit_3r_given_2r": 0.7376237623762376,
+            "hit_4r_given_2r": 0.5495049504950495,
+            "hit_5r_given_2r": 0.42574257425742573
+          },
+          "hit_2r_count": 202,
+          "hit_2r_fraction": 0.24076281287246723,
+          "median_giveback_r": 1.2463930298830497,
+          "median_mae_r": 0.8308870453096632,
+          "median_mfe_r": 0.6099009900990179
+        },
+        "price_r_before_commission": 32.89401327672404,
+        "profit_factor": 0.8842068273606212,
+        "return_skew": 4.2184531190182,
+        "top_5pct_positive_profit_share": 0.6769548930891763,
+        "trades": 839,
+        "win_rate": 0.2205005959475566
+      },
+      "5": {
+        "average_loss_r": -0.9061855096215055,
+        "average_win_r": 2.640118720424555,
+        "commission_r": 97.19944522818764,
+        "estimated_spread_r": 12.905158132204773,
+        "exit_reasons": {
+          "BIAS_FLIP": 3,
+          "ROLLOVER_FLAT": 35,
+          "STOP": 342,
+          "VWAP_INVALIDATION": 459
+        },
+        "expectancy_r": -0.18339883103047297,
+        "maximum_drawdown_r": 174.47041797906564,
+        "maximum_winner_r": 15.988083416086848,
+        "median_holding_hours": 0.5,
+        "median_loss_holding_hours": 0.5,
+        "median_winner_holding_hours": 5.0,
+        "net_r": -153.87161923456682,
+        "net_r_percentiles": {
+          "50": -0.8326246505530358,
+          "90": 1.367545257127137,
+          "95": 3.246198241762203,
+          "99": 9.383751633890462
+        },
+        "path": {
+          "continuation_after_2r": {
+            "hit_3r_given_2r": 0.7487179487179487,
+            "hit_4r_given_2r": 0.5384615384615384,
+            "hit_5r_given_2r": 0.4307692307692308
+          },
+          "hit_2r_count": 195,
+          "hit_2r_fraction": 0.232419547079857,
+          "median_giveback_r": 1.2668112416775277,
+          "median_mae_r": 0.8730277986477517,
+          "median_mfe_r": 0.5477308294209093
+        },
+        "price_r_before_commission": -56.67217400637917,
+        "profit_factor": 0.7458062031059193,
+        "return_skew": 3.943745562155826,
+        "top_5pct_positive_profit_share": 0.6898671978715569,
+        "trades": 839,
+        "win_rate": 0.20381406436233612
+      }
+    }
+  },
+  "bias_aligned_signals": 890,
+  "bias_rejections": 4407,
+  "development_end_exclusive_utc": "2025-08-28 00:00:00+00:00",
+  "development_start_utc": "2021-07-01 00:00:00+00:00",
+  "engine_version": "f2-t3-vwap-exit-v0.1",
+  "execution_rejections": {
+    "delay_1": 58,
+    "primary": 51,
+    "slippage_2": 51,
+    "slippage_5": 51
+  },
+  "experiment_id": "F2_T3_E1_VWAP_INVALIDATION",
+  "files": [
+    {
+      "name": "primary",
+      "path": "data\\canonical\\phase08\\e1_primary_ledger.parquet",
+      "sha256": "a199bb8be1bfb51aac46071d61010867a31cb644733349e820c0db6fdeca6f8e"
+    },
+    {
+      "name": "delay_1",
+      "path": "data\\canonical\\phase08\\e1_delay_1_ledger.parquet",
+      "sha256": "70d5b7fdb18457fc66ab6c72f9127e585be2bff6ddd5848957f8780457573e60"
+    },
+    {
+      "name": "slippage_2",
+      "path": "data\\canonical\\phase08\\e1_slippage_2_ledger.parquet",
+      "sha256": "1698665c6fd73c1effdc1d2c89b3d2041e3b2cddceaf1c2d744231d5ba5f427e"
+    },
+    {
+      "name": "slippage_5",
+      "path": "data\\canonical\\phase08\\e1_slippage_5_ledger.parquet",
+      "sha256": "548a5019a793e46a3e21214cb5c67ae338bf033b6c96e32d0da6d1a86eecab8f"
+    }
+  ],
+  "input_hashes": {
+    "bias": "06b7bccd4a7e10aac8cd7ecaa5458def1776319f70b4260b40d4dc30548cb6b2",
+    "bias_freeze": "e13d68a0501e811a67e62576c69b80d494177a502a9c101b65e412b28036fe11",
+    "contract": "70d94c82c5fd4786b826fe5cd0dcaeb9bb966f216173cdf2f15cf8efb19236e4",
+    "control_ledger": "3358f4825c9393a8fa43b3359358eb115be41fbc81561dc286d9704d00d0f831",
+    "events": "4a464b17a2191dbc84a807ebb051c6bb87be8f90bf1e03d48ffbd69b939ea721",
+    "execution": "13c38c9b60511565ec84d4b6badfe71e89f5990da30506ee9d0bbdf993739103",
+    "prices": "a518b3929afb3369d77e56265f546a7675efc4755968c13ed2d258dd1da16b50",
+    "signals": "9e1537589606160bd751d8913b756b6cd44ea652851ad51c277a52808b1477ff"
+  },
+  "locked_outcomes_accessed": false,
+  "locked_runs_consumed": 0,
+  "schema_version": "1.0",
+  "signals": 5297,
+  "status": "NO_PROMOTION",
+  "summary_sha256": "5541ba5059fab4a63fbc42a96b490c1841c31ecad0d77ff6a93367f23113990d"
+}

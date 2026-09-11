@@ -41,6 +41,21 @@ not run. Telegram, demo EA, and live execution are not authorized.
 Read the [plain-language final review](evidence/phase07/REPORT.md) before using
 any result from this repository.
 
+### Phase 08 exit follow-up
+
+A separately registered development experiment replaced the fixed two-R target
+on F2_T3 with a no-target, next-bar London-VWAP invalidation exit. It confirmed
+that some winners continue far beyond two R: 41.75% of the 206 trades reaching
++2R also reached +5R, and the largest realized winner was +20.16R.
+
+The overall strategy nevertheless remained negative after commission at
+-0.0266R/trade over 839 development trades. Only two pairs and two calendar
+years were positive, drawdown was 103.96R, the bootstrap interval crossed zero,
+and two points of added slippage reduced expectancy to -0.0766R. Phase 08 is
+therefore `NO_PROMOTION`; its locked slice remains unopened and operational
+permission is still denied. See the
+[Phase 08 readable report](evidence/phase08/REPORT.md).
+
 See [the PRD](docs/PRD.md), [technical plan](docs/TECHNICAL_PLAN.md), and
 [research log](docs/RESEARCH_LOG.md).
 
@@ -50,6 +65,7 @@ See [the PRD](docs/PRD.md), [technical plan](docs/TECHNICAL_PLAN.md), and
 python -m pytest
 python -m ruff check .
 python -m mypy src
+python -m fx_fundamental_technical.cli phase08-exit-research
 ```
 
 Large raw and generated data are ignored. Reviewer-visible reports, contracts,

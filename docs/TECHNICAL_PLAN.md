@@ -148,12 +148,16 @@ validation but did not pass promotion, so the locked test was correctly not run.
 
 ## Post-research scope
 
-Only `PROCEED_TO_FORWARD_DEMO` authorizes Phase 08-11: live collectors,
-Telegram notifier, demo EA integration, and frozen forward-test monitoring.
+Only `PROCEED_TO_FORWARD_DEMO` authorizes the originally proposed operational
+work: live collectors, Telegram notifier, demo EA integration, and frozen
+forward-test monitoring. The new research Phase 08 below does not grant that
+permission.
 
 ## Phase 08 - exit asymmetry research
 
-Status: active under a new information boundary. This research phase is not the
+previously reserved operational Phase 08.
+Status: complete with `NO_PROMOTION`. This research phase is not the previously
+reserved operational Phase 08.
 previously reserved operational Phase 08.
 
 - retain F2_T3 entries and every existing cost and portfolio constraint;
@@ -166,3 +170,8 @@ previously reserved operational Phase 08.
 
 Exit: `CANDIDATE_FROZEN` or `NO_PROMOTION`. A locked run is a separate phase and
 is forbidden unless the candidate is frozen first.
+
+Result: E1 improved development expectancy from -0.1193R to -0.0266R and
+created genuine right-tail winners, but failed every economic and robustness
+gate except sample size and improvement over control. The locked slice remained
+closed and no candidate freeze was created.

@@ -352,6 +352,9 @@ def extended_metrics(ledger: pd.DataFrame) -> dict[str, object]:
         return result
     net = ledger["net_r"].astype(float)
     wins = net[net > 0]
+    holding_hours = (
+        ledger["exit_time"] - ledger["entry_time"]
+    ).dt.total_seconds() / 3600
     result.update(
         {
             "maximum_winner_r": float(net.max()),
@@ -366,8 +369,16 @@ def extended_metrics(ledger: pd.DataFrame) -> dict[str, object]:
                 if not wins.empty
                 else None
             ),
+            "median_winner_holding_hours": (
+                float(holding_hours[net > 0].median()) if not wins.empty else None
+            ),
+            "median_loss_holding_hours": float(holding_hours[net <= 0].median()),
         }
     )
+    if "price_r_before_commission" in ledger:
+        result["price_r_before_commission"] = float(
+            ledger["price_r_before_commission"].astype(float).sum()
+        )
     if "maximum_favorable_excursion_r" in ledger:
         mfe = ledger["maximum_favorable_excursion_r"].astype(float)
         hit_two = mfe >= 2.0
@@ -462,6 +473,11 @@ def evaluate_promotion(
     stress_metrics = {
         str(points): extended_metrics(ledger) for points, ledger in stresses.items()
     }
+    control_entries = set(zip(control["pair"], control["entry_time"], strict=True))
+    candidate_entries = set(
+        zip(candidate["pair"], candidate["entry_time"], strict=True)
+    )
+    overlap = len(control_entries & candidate_entries)
     checks = {
         "minimum_development_trades": len(candidate)
         >= int(cast(int, gate["minimum_development_trades"])),
@@ -498,6 +514,12 @@ def evaluate_promotion(
         "expectancy_block_bootstrap_95_ci_r": interval,
         "one_bar_exit_delay_metrics": extended_metrics(delay),
         "slippage_stress_metrics": stress_metrics,
+        "entry_set_comparison": {
+            "overlap": overlap,
+            "control_only": len(control_entries - candidate_entries),
+            "candidate_only": len(candidate_entries - control_entries),
+            "control_overlap_fraction": overlap / len(control_entries),
+        },
         "promotion_checks": checks,
         "eligible_for_locked_test": all(checks.values()),
     }
@@ -520,6 +542,10 @@ def _write_report(path: Path, payload: dict[str, object]) -> None:
     checks = cast(dict[str, bool], assessment["promotion_checks"])
     path_metrics = cast(dict[str, object], candidate["path"])
     continuation = cast(dict[str, object], path_metrics["continuation_after_2r"])
+    interval = cast(list[float], assessment["expectancy_block_bootstrap_95_ci_r"])
+    stress = cast(dict[str, dict[str, object]], assessment["slippage_stress_metrics"])
+    delay = cast(dict[str, object], assessment["one_bar_exit_delay_metrics"])
+    entries = cast(dict[str, object], assessment["entry_set_comparison"])
     lines = [
         "# Phase 08 - Exit Asymmetry Development Result",
         "",
@@ -559,6 +585,27 @@ def _write_report(path: Path, payload: dict[str, object]) -> None:
         f"- Maximum realized winner: {_as_float(candidate['maximum_winner_r']):+.2f}R.",
         f"- Return skew: {_as_float(candidate['return_skew']):+.3f}.",
         f"- Median MFE giveback: {_as_float(path_metrics['median_giveback_r']):.2f}R.",
+        f"- Top 5% of trades supplied "
+        f"{100 * _as_float(candidate['top_5pct_positive_profit_share']):.2f}% "
+        "of positive profit.",
+        "",
+        "## Cost and stability",
+        "",
+        f"- Price PnL after spread but before commission: "
+        f"{_as_float(candidate['price_r_before_commission']):+.2f}R; commission: "
+        f"-{_as_float(candidate['commission_r']):.2f}R; net: "
+        f"{_as_float(candidate['net_r']):+.2f}R.",
+        f"- Positive pairs: {assessment['positive_pair_count']}/5; positive calendar "
+        f"years: {assessment['positive_calendar_year_count']}/5.",
+        f"- Three-month-block bootstrap 95% interval: [{interval[0]:+.4f}R, "
+        f"{interval[1]:+.4f}R].",
+        f"- Added slippage expectancy: +2 points "
+        f"{_as_float(stress['2']['expectancy_r']):+.4f}R; +5 points "
+        f"{_as_float(stress['5']['expectancy_r']):+.4f}R.",
+        f"- One-bar delayed invalidation expectancy: "
+        f"{_as_float(delay['expectancy_r']):+.4f}R.",
+        f"- Entry overlap with E0: {entries['overlap']}/{control['trades']} "
+        f"({100 * _as_float(entries['control_overlap_fraction']):.2f}%).",
         "",
         "## Frozen promotion checks",
         "",
