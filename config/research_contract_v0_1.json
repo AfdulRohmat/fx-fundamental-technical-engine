@@ -1,0 +1,113 @@
+{
+  "schema_version": "0.1",
+  "registered_at_utc": "2026-09-11T13:15:00Z",
+  "project": "fx-fundamental-technical-engine",
+  "currency_universe": ["USD", "EUR", "GBP", "JPY", "AUD", "CAD"],
+  "pair_universe": ["EURUSD", "GBPUSD", "USDJPY", "AUDUSD", "USDCAD"],
+  "research_window": {
+    "target_start": "2017-01-01",
+    "cutoff": "2026-09-11",
+    "common_coverage_required": true,
+    "chronological_split": {
+      "development": 0.6,
+      "validation": 0.2,
+      "locked_test": 0.2
+    },
+    "historical_locked_slice_is_pristine_oos": false,
+    "genuine_oos": "post-freeze demo forward test"
+  },
+  "fundamental_variants": [
+    {
+      "id": "F1",
+      "name": "structural_macro_policy",
+      "fx_return_training_allowed": false,
+      "requires_level_revision_agreement": true,
+      "requires_two_year_yield_confirmation": false
+    },
+    {
+      "id": "F2",
+      "name": "market_confirmed_structural_macro_policy",
+      "fx_return_training_allowed": false,
+      "requires_level_revision_agreement": true,
+      "requires_two_year_yield_confirmation": true
+    }
+  ],
+  "technical_variants": [
+    {
+      "id": "T1",
+      "name": "previous_fx_day_breakout_retest",
+      "timeframe": "M15",
+      "retest_bars": 4
+    },
+    {
+      "id": "T2",
+      "name": "london_opening_range_breakout",
+      "timeframe": "M15",
+      "opening_range_minutes": 60
+    },
+    {
+      "id": "T3",
+      "name": "london_anchored_tick_vwap_reclaim",
+      "timeframe": "M15",
+      "volume_kind": "broker_tick_volume"
+    }
+  ],
+  "clock": {
+    "canonical_timezone": "UTC",
+    "fx_day_boundary": "17:00 America/New_York",
+    "london_anchor": "08:00 Europe/London",
+    "daily_bias_snapshot": "06:00 UTC",
+    "entry_window": "08:00-17:00 Europe/London",
+    "news_blackout_minutes_before": 30,
+    "news_blackout_minutes_after": 30
+  },
+  "risk": {
+    "account_risk_fraction": 0.0025,
+    "atr_timeframe": "M15",
+    "atr_period": 14,
+    "stop_atr_multiple": 1.0,
+    "target_r_multiple": 2.0,
+    "maximum_holding_hours": 24,
+    "maximum_entries_per_pair_per_fx_day": 1,
+    "maximum_open_positions": 2,
+    "close_on_bias_flip": true,
+    "friday_flat_time": "16:45 America/New_York"
+  },
+  "execution": {
+    "broker": "Exness",
+    "account_model": "Raw",
+    "entry_timing": "next_tradable_M15_open",
+    "price_source": "broker_native_MT5",
+    "spread_source": "broker_native_when_available",
+    "commission_required": true,
+    "swap_required_when_crossing_rollover": true,
+    "slippage_scenarios_points": [0, 2, 5],
+    "real_tick_overlap_required": true
+  },
+  "iteration_policy": {
+    "parameter_grid_allowed": false,
+    "pair_specific_parameters_allowed": false,
+    "maximum_promoted_hybrid_candidates": 1,
+    "locked_test_runs_allowed": 1,
+    "development_matrix": [
+      "F1_T1",
+      "F1_T2",
+      "F1_T3",
+      "F2_T1",
+      "F2_T2",
+      "F2_T3"
+    ]
+  },
+  "promotion_gate": {
+    "minimum_locked_trades": 100,
+    "minimum_positive_pairs": 3,
+    "pair_count": 5,
+    "maximum_single_pair_profit_share": 0.5,
+    "maximum_drawdown_r": 12.0,
+    "requires_positive_net_expectancy": true,
+    "requires_improvement_over_technical_baseline": true,
+    "requires_signal_parity": true,
+    "requires_cost_and_delay_survival": true
+  },
+  "random_seed": 20260911
+}
