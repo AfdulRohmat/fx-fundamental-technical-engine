@@ -1,7 +1,7 @@
 # Technical Plan
 
-Status: Phase 05 completed with no promoted candidate. Phase 06 locked testing
-is prohibited; Phase 07 closes the research as inconclusive.
+Status: complete through Phase 07. Final verdict: `RESEARCH_INCONCLUSIVE`;
+operational permission denied.
 
 ## Architecture
 
@@ -142,6 +142,9 @@ Result: `NOT_RUN`; Phase 05 produced no eligible frozen candidate.
 
 Exit: `PROCEED_TO_FORWARD_DEMO`, `RESEARCH_INCONCLUSIVE`, or
 `DO_NOT_PROCEED`.
+
+Result: `RESEARCH_INCONCLUSIVE`. F2_T3 was economically interesting in
+validation but did not pass promotion, so the locked test was correctly not run.
 
 ## Post-research scope
 

@@ -27,21 +27,19 @@ to `FLAT`.
 - Macro training history: 2017 onward. Costed M15 test history: July 2021 onward
   after rejecting lower-granularity bars returned under the M15 request.
 
-## Status
+## Research outcome
 
-Phase 03 bias reconstruction is frozen without reading FX outcomes. The policy
-forecast improves both baselines in point estimate, but its block-bootstrap
-intervals cross zero, so policy skill is `NOT_SUPPORTED`. The project continues
-with that caveat fixed in the record. Phase 04 found all three technical-only
-baselines negative after registered costs; Phase 05 tests whether the frozen
-fundamental permission filter adds enough value to become positive, not merely
-whether it reduces losses.
+Final verdict: `RESEARCH_INCONCLUSIVE`.
 
-Phase 05 found an interesting but non-promotable F2_T3 validation result:
-+0.0979R/trade over 202 trades versus -0.1804R for T3. It breached the frozen
-drawdown gate, was negative throughout development, had a confidence interval
-crossing zero, and failed the five-point slippage stress. Therefore no candidate
-may enter the locked test and no demo/Telegram build is authorized by this run.
+F2-confirmed structural policy bias materially improved the T3 London VWAP
+reclaim in validation: +0.0979R/trade over 202 trades versus -0.1804R for T3.
+It did not pass promotion because development was negative, validation drawdown
+was 18.75R versus the 12R limit, uncertainty crossed zero, a timing placebo was
+slightly better, and five-point slippage made it negative. The locked slice was
+not run. Telegram, demo EA, and live execution are not authorized.
+
+Read the [plain-language final review](evidence/phase07/REPORT.md) before using
+any result from this repository.
 
 See [the PRD](docs/PRD.md), [technical plan](docs/TECHNICAL_PLAN.md), and
 [research log](docs/RESEARCH_LOG.md).

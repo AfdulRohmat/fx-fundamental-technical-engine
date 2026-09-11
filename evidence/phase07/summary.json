@@ -1,0 +1,191 @@
+{
+  "best_candidate_assessment": {
+    "baseline_expectancy_r": -0.1803696502120794,
+    "eligible_for_promotion": false,
+    "expectancy_block_bootstrap_95_ci_r": [
+      -0.17156531220626411,
+      0.2750199145901573
+    ],
+    "incremental_expectancy_r": 0.27830317527021237,
+    "metrics": {
+      "average_loss_r": -1.113371081318806,
+      "average_win_r": 1.8705744124390196,
+      "commission_r": 23.200857539515564,
+      "estimated_spread_r": 1.3980150661882624,
+      "exit_reasons": {
+        "ROLLOVER_FLAT": 1,
+        "STOP": 120,
+        "TARGET": 81
+      },
+      "expectancy_r": 0.09793352505813298,
+      "maximum_drawdown_r": 18.750448728403672,
+      "median_holding_hours": 1.0,
+      "net_r": 19.78257206174286,
+      "profit_factor": 1.1480681238692831,
+      "trades": 202,
+      "win_rate": 0.40594059405940597
+    },
+    "pair_metrics": {
+      "AUDUSD": {
+        "average_loss_r": -1.1037687237989118,
+        "average_win_r": 1.8955485978314885,
+        "commission_r": 2.392824752701099,
+        "estimated_spread_r": 0.0,
+        "exit_reasons": {
+          "STOP": 14,
+          "TARGET": 9
+        },
+        "expectancy_r": 0.06987718466515772,
+        "maximum_drawdown_r": 3.2207746704242863,
+        "median_holding_hours": 1.5,
+        "net_r": 1.6071752472986276,
+        "profit_factor": 1.1040056938330285,
+        "trades": 23,
+        "win_rate": 0.391304347826087
+      },
+      "EURUSD": {
+        "average_loss_r": -1.099271276474458,
+        "average_win_r": 1.9193502661246629,
+        "commission_r": 3.0152505272691394,
+        "estimated_spread_r": 0.7050359712230203,
+        "exit_reasons": {
+          "STOP": 19,
+          "TARGET": 14
+        },
+        "expectancy_r": 0.18135604462819938,
+        "maximum_drawdown_r": 6.520532396913801,
+        "median_holding_hours": 1.0,
+        "net_r": 5.984749472730579,
+        "profit_factor": 1.286541476244567,
+        "trades": 33,
+        "win_rate": 0.42424242424242425
+      },
+      "GBPUSD": {
+        "average_loss_r": -1.0795949734534778,
+        "average_win_r": 1.9215935063767633,
+        "commission_r": 3.480786195009423,
+        "estimated_spread_r": 0.6263157894736434,
+        "exit_reasons": {
+          "STOP": 26,
+          "TARGET": 18
+        },
+        "expectancy_r": 0.14816395011343883,
+        "maximum_drawdown_r": 11.482990764929212,
+        "median_holding_hours": 0.75,
+        "net_r": 6.519213804991309,
+        "profit_factor": 1.232252834317657,
+        "trades": 44,
+        "win_rate": 0.4090909090909091
+      },
+      "USDCAD": {
+        "average_loss_r": -1.1957289024930509,
+        "average_win_r": 1.8028305680020937,
+        "commission_r": 10.799778081996207,
+        "estimated_spread_r": 0.0666633054915989,
+        "exit_reasons": {
+          "STOP": 30,
+          "TARGET": 25
+        },
+        "expectancy_r": 0.1672526750047422,
+        "maximum_drawdown_r": 5.667127295548748,
+        "median_holding_hours": 1.0,
+        "net_r": 9.198897125260821,
+        "profit_factor": 1.2564376453024164,
+        "trades": 55,
+        "win_rate": 0.45454545454545453
+      },
+      "USDJPY": {
+        "average_loss_r": -1.0749766770153328,
+        "average_win_r": 1.8623008374335521,
+        "commission_r": 3.5122179825396946,
+        "estimated_spread_r": 0.0,
+        "exit_reasons": {
+          "ROLLOVER_FLAT": 1,
+          "STOP": 31,
+          "TARGET": 15
+        },
+        "expectancy_r": -0.0750524167774144,
+        "maximum_drawdown_r": 11.492328864006407,
+        "median_holding_hours": 1.5,
+        "net_r": -3.5274635885384766,
+        "profit_factor": 0.8941473331930276,
+        "trades": 47,
+        "win_rate": 0.3404255319148936
+      }
+    },
+    "positive_pair_count": 4,
+    "positive_pair_profit_share_max": 0.394632477756412,
+    "promotion_checks": {
+      "concentration": true,
+      "drawdown": false,
+      "improves_baseline": true,
+      "minimum_trades": true,
+      "positive_expectancy": true,
+      "positive_pairs": true
+    }
+  },
+  "best_diagnostic_candidate": "F2_T3",
+  "demo_ea_forward_test_authorized": false,
+  "evidence": [
+    {
+      "path": "evidence\\phase03\\summary.json",
+      "sha256": "e904621541db0aecdbaeabb19b139d2994f652b577a7553a4e2fa542ec762971"
+    },
+    {
+      "path": "evidence\\phase04\\summary.json",
+      "sha256": "44db6175fff0551e2daacf27eb520ce580b13b4da85ccbaa7e0e4a3b619b292c"
+    },
+    {
+      "path": "evidence\\phase05\\summary.json",
+      "sha256": "30950267ce6985d31b8c97ce4f0c24cb1e0e8b729d832407b2b0a8ae866446a7"
+    },
+    {
+      "path": "evidence\\phase06\\summary.json",
+      "sha256": "9e86197fee8862c5c210b9b7664f41aa8d736a639063aa1fb4a321557a79e569"
+    }
+  ],
+  "hybrid_validation_status": "NO_CANDIDATE_PROMOTED",
+  "locked_strategy_runs_consumed": 0,
+  "locked_test_status": "NOT_RUN",
+  "operational_permission": "DENIED",
+  "policy_diagnostic": {
+    "currencies": [
+      "AUD",
+      "CAD",
+      "EUR",
+      "GBP",
+      "JPY",
+      "USD"
+    ],
+    "directional_accuracy_nonzero": 0.9105691056910569,
+    "mae_bp": {
+      "no_change": 59.583333333333336,
+      "structural_model": 50.95064899289595,
+      "three_month_momentum": 63.979885057471265
+    },
+    "months": 58,
+    "paired_mae_improvement_95_ci_bp": {
+      "no_change": [
+        -1.1078388794344296,
+        19.956583270372757
+      ],
+      "three_month_momentum": [
+        -0.3171130932304601,
+        26.671891837977917
+      ]
+    },
+    "rows": 348,
+    "status": "NOT_SUPPORTED"
+  },
+  "reasons": [
+    "No hybrid candidate passed every validation promotion check.",
+    "The best diagnostic cell was economically positive and improved its baseline.",
+    "No locked trade metric exists, so this is not a locked economic failure."
+  ],
+  "schema_version": "1.0",
+  "summary_sha256": "2e2e5e12b42642e8c52db0bb009b40283cda37a3cc234402a977791bf841c19a",
+  "technical_baseline_status": "PASS_BASELINES_COMPLETE",
+  "telegram_build_authorized": false,
+  "tuning_after_result": false,
+  "verdict": "RESEARCH_INCONCLUSIVE"
+}
