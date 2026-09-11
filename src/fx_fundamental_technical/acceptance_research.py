@@ -307,6 +307,13 @@ def _write_report(path: Path, payload: dict[str, object]) -> None:
         f"- One additional entry-delay bar: {_as_float(delay['expectancy_r']):+.4f}R.",
         f"- Maximum winner: {_as_float(candidate['maximum_winner_r']):+.2f}R; "
         f"reached +2R: {path_metrics['hit_2r_count']} trades.",
+        f"- Price PnL after spread but before commission: "
+        f"{_as_float(candidate['price_r_before_commission']):+.2f}R; commission: "
+        f"-{_as_float(candidate['commission_r']):.2f}R; net: "
+        f"{_as_float(candidate['net_r']):+.2f}R.",
+        f"- Median holding time: winners "
+        f"{_as_float(candidate['median_winner_holding_hours']):.2f}h; losses "
+        f"{_as_float(candidate['median_loss_holding_hours']):.2f}h.",
         "",
         "## Frozen promotion checks",
         "",
@@ -452,6 +459,19 @@ def run_phase09(
         output = output_root / f"{name}_ledger.parquet"
         ledger.to_parquet(output, index=False)
         files.append({"name": name, "path": str(output), "sha256": file_sha256(output)})
+    signal_frames = {
+        "acceptance_signals": acceptance_signals,
+        "acceptance_rejections": acceptance_rejections,
+        "primary_f2_signals": primary_signals,
+        "primary_bias_rejections": primary_bias_rejections,
+    }
+    signal_files: list[dict[str, object]] = []
+    for name, frame in signal_frames.items():
+        output = output_root / f"{name}.parquet"
+        frame.to_parquet(output, index=False)
+        signal_files.append(
+            {"name": name, "path": str(output), "sha256": file_sha256(output)}
+        )
 
     development_days = (end - start).total_seconds() / 86400
     payload: dict[str, object] = {
@@ -469,6 +489,8 @@ def run_phase09(
         "acceptance_signals": len(acceptance_signals),
         "acceptance_rejections": len(acceptance_rejections),
         "primary_f2_signals": len(primary_signals),
+        "primary_entry_time_min": str(primary_signals["entry_time"].min()),
+        "primary_entry_time_max": str(primary_signals["entry_time"].max()),
         "primary_bias_rejections": len(primary_bias_rejections),
         "execution_rejections": {
             "primary": len(primary_execution_rejections),
@@ -484,6 +506,7 @@ def run_phase09(
         "placebo_counts": placebo_counts,
         "assessment": assessment,
         "files": files,
+        "signal_files": signal_files,
         "input_hashes": {
             "contract": file_sha256(contract_path),
             "execution": file_sha256(execution_path),

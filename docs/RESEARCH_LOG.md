@@ -131,3 +131,32 @@ Status: `NO_PROMOTION`; locked test not authorized.
   `a199bb8be1bfb51aac46071d61010867a31cb644733349e820c0db6fdeca6f8e`.
 - No locked observation was loaded, zero locked runs were consumed, and no
   candidate freeze was created.
+
+## Phase 09 - one-bar VWAP acceptance
+
+Status: `NO_PROMOTION`; locked test not authorized.
+
+- Registered one mechanical confirmation before reading its outcome: after the
+  first T3 London-VWAP reclaim, observe one completed M15 candle and enter on
+  the following open only when that candle closes on the reclaimed side.
+- Kept F2 as the mandatory direction filter, rechecked its point-in-time state
+  at actual entry, and retained the Phase 08 stop, no-target VWAP invalidation,
+  costs, blackout, portfolio limits, and locked boundary.
+- F2 acceptance produced 571 trades, 24.17% wins, +0.0492R expectancy, +28.07R
+  net, 1.076 profit factor, and 60.46R maximum drawdown. Average winner was
+  +2.8782R versus -0.8525R average loss; the maximum winner was +18.33R.
+- It improved the immediate-entry F2 control by +0.0757R/trade and the
+  technical-only acceptance control by +0.1673R/trade. Reversed bias was
+  -0.1294R, one-snapshot-lag bias +0.0253R, and shuffled bias -0.0817R.
+- Three of five pairs and three of five calendar years were positive, but
+  USDCAD contributed 57.24% of positive-pair profit. The block-bootstrap 95%
+  interval was [-0.1998R, +0.2733R].
+- Price PnL after spread but before commission was +92.19R; -64.12R commission
+  reduced it to +28.07R. Two-point slippage produced -0.0057R/trade and five
+  points produced -0.0774R/trade.
+- The candidate passed attribution, sample-size, pair-count, year-count, and
+  extra-delay checks. It failed drawdown, pair concentration, uncertainty, and
+  both slippage gates, so no candidate freeze was created.
+- Primary ledger SHA-256:
+  `c9fd8ef696f3f233ca19d378edd51344d35b147415dcd47e687495b0ba2aede6`.
+- No locked observation was loaded and zero locked runs were consumed.

@@ -1,7 +1,7 @@
 # Technical Plan
 
-Status: complete through Phase 07. Final verdict: `RESEARCH_INCONCLUSIVE`;
-operational permission denied.
+Status: core research complete through Phase 07; exploratory Phases 08 and 09
+also complete with `NO_PROMOTION`. Operational permission denied.
 
 ## Architecture
 
@@ -178,7 +178,7 @@ closed and no candidate freeze was created.
 
 ## Phase 09 - one-bar VWAP acceptance
 
-Status: active under a new pre-registered contract.
+Status: complete with `NO_PROMOTION` under a new pre-registered contract.
 
 - preserve F2 as the required directional permission;
 - preserve the Phase 08 E1 no-target exit;
@@ -190,3 +190,10 @@ Status: active under a new pre-registered contract.
 - keep the existing locked interval closed unless every gate passes.
 
 Exit: `CANDIDATE_FROZEN` or `NO_PROMOTION`.
+
+Result: the F2 one-bar acceptance candidate produced +0.0492R expectancy over
+571 development trades. It improved both immediate F2 entry (-0.0266R) and the
+technical-only acceptance control (-0.1182R), and it beat all three bias
+placebos. It was not promoted because drawdown was 60.46R, single-pair positive
+profit concentration was 57.24%, the bootstrap lower bound was negative, and
+both registered slippage gates failed. The locked interval remained closed.

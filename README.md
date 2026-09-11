@@ -56,6 +56,25 @@ therefore `NO_PROMOTION`; its locked slice remains unopened and operational
 permission is still denied. See the
 [Phase 08 readable report](evidence/phase08/REPORT.md).
 
+### Phase 09 entry-quality follow-up
+
+A pre-registered one-bar acceptance rule required the candle immediately after
+the T3 reclaim to close on the reclaimed side of causal London VWAP. F2 remained
+the mandatory directional permission and was checked again at the delayed
+entry. No new indicator or threshold was introduced.
+
+This was the first follow-up to produce positive development economics:
++0.0492R/trade and +28.07R over 571 trades, compared with -0.0266R for immediate
+F2 entry and -0.1182R for the identical acceptance rule without fundamental
+bias. Reversed and shuffled bias placebos were negative; a one-snapshot-lag
+placebo was positive but weaker at +0.0253R.
+
+It is still `NO_PROMOTION`. Maximum drawdown was 60.46R, 57.24% of positive-pair
+profit came from USDCAD, the bootstrap interval crossed zero, and two points of
+added slippage reduced expectancy below zero. The locked slice remains
+unopened; Telegram, demo EA, and live execution remain unauthorized. See the
+[Phase 09 readable report](evidence/phase09/REPORT.md).
+
 See [the PRD](docs/PRD.md), [technical plan](docs/TECHNICAL_PLAN.md), and
 [research log](docs/RESEARCH_LOG.md).
 
@@ -65,7 +84,7 @@ See [the PRD](docs/PRD.md), [technical plan](docs/TECHNICAL_PLAN.md), and
 python -m pytest
 python -m ruff check .
 python -m mypy src
-python -m fx_fundamental_technical.cli phase08-exit-research
+python -m fx_fundamental_technical.cli phase09-acceptance-research
 ```
 
 Large raw and generated data are ignored. Reviewer-visible reports, contracts,
