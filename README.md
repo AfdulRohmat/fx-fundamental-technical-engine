@@ -24,12 +24,15 @@ to `FLAT`.
   confirmed by a two-year sovereign-yield proxy (`F2`).
 - Technical candidates: previous-day breakout/retest (`T1`), London opening
   range breakout (`T2`), and London-anchored tick-VWAP reclaim (`T3`).
-- Research target: 2017 onward, subject to a pre-PnL source gate.
+- Macro training history: 2017 onward. Costed M15 test history: July 2021 onward
+  after rejecting lower-granularity bars returned under the M15 request.
 
 ## Status
 
-Phase 00 contract foundation passed. No historical outcome may be read until
-Phase 01 data qualification and Phase 02 point-in-time reconstruction complete.
+Phase 01 source qualification passed. The active pre-PnL contract is v0.2; it
+uses a July 2021 common M15 start and forces all positions flat before rollover.
+No historical outcome may be read until Phase 02 point-in-time reconstruction
+and bias freezing complete.
 
 See [the PRD](docs/PRD.md), [technical plan](docs/TECHNICAL_PLAN.md), and
 [research log](docs/RESEARCH_LOG.md).

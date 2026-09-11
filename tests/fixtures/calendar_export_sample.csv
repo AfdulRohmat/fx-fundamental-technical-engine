@@ -1,0 +1,4 @@
+schema_version,value_id,event_id,release_time_server,release_epoch_raw,reference_period_server,reference_epoch_raw,revision,actual,forecast,previous_as_reported,revised_previous,impact_type,country_id,country_code,country_name,currency,event_code,event_name,event_type,sector,frequency,time_mode,unit,importance,multiplier,digits,source_url,server_utc_offset_seconds_at_export
+1.0,1001,2001,2024.01.11 15:30:00,1704987000,2023.12.01 00:00:00,1701388800,0,3.9,3.8,4.0,,1,840,US,United States,USD,US_CORE_CPI_YY,Core CPI y/y,1,3,3,0,1,3,0,1,https://example.test/us-cpi,10800
+1.0,1002,2002,2024.02.13 15:30:00,1707838200,2024.01.01 00:00:00,1704067200,1,3.9,3.7,3.9,3.8,-1,840,US,United States,USD,US_CORE_CPI_YY,Core CPI y/y,1,3,3,0,1,3,0,1,https://example.test/us-cpi,10800
+1.0,1003,2003,2024.01.16 09:00:00,1705395600,2023.12.01 00:00:00,1701388800,0,4.4,4.3,4.3,,1,826,GB,United Kingdom,GBP,GB_WAGES_3M_AVG,Average Earnings,1,2,3,0,1,3,0,1,https://example.test/uk-labour,7200

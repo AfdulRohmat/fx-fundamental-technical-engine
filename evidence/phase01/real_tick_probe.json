@@ -1,0 +1,46 @@
+{
+  "end_utc": "2026-09-10T11:00:00+00:00",
+  "historical_coverage_claimed": false,
+  "probes": [
+    {
+      "first_time_msc": 1789034401055,
+      "last_time_msc": 1789037999020,
+      "symbol": "EURUSD",
+      "ticks": 1739,
+      "usable_bid_ask": true
+    },
+    {
+      "first_time_msc": 1789034400024,
+      "last_time_msc": 1789037999228,
+      "symbol": "GBPUSD",
+      "ticks": 2627,
+      "usable_bid_ask": true
+    },
+    {
+      "first_time_msc": 1789034400230,
+      "last_time_msc": 1789037999460,
+      "symbol": "USDJPY",
+      "ticks": 4910,
+      "usable_bid_ask": true
+    },
+    {
+      "first_time_msc": 1789034400559,
+      "last_time_msc": 1789037999682,
+      "symbol": "AUDUSD",
+      "ticks": 1319,
+      "usable_bid_ask": true
+    },
+    {
+      "first_time_msc": 1789034400646,
+      "last_time_msc": 1789037994376,
+      "symbol": "USDCAD",
+      "ticks": 1074,
+      "usable_bid_ask": true
+    }
+  ],
+  "read_only": true,
+  "schema_version": "1.0",
+  "start_utc": "2026-09-10T10:00:00+00:00",
+  "status": "PASS_CURRENT_OVERLAP_ONLY",
+  "summary_sha256": "d0ad7871ca3e252ae8ec228a50d678fc7772c370213f15ddd3dc6340ce858c16"
+}

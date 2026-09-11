@@ -31,7 +31,10 @@ the next M15 open. VWAP is an execution anchor, not claimed fair value.
   high-impact event for either pair currency.
 - Maximum one entry per pair per FX day and two concurrent portfolio positions.
 - Initial stop distance is one M15 ATR(14); take profit is two initial R.
-- Position exits after 24 hours, at Friday 16:45 New York, or after an effective
-  fundamental flip/FLAT state, whichever occurs first.
+- Position exits after 24 hours, at 20:45 UTC before the earliest broker
+  rollover, at Friday 16:45 New York, or after an effective fundamental
+  flip/FLAT state, whichever occurs first. The pre-rollover exit was registered
+  during source qualification because free historical swap schedules are not
+  available; therefore no tested trade may incur swap.
 - Ambiguous same-bar stop/target ordering uses the adverse-first result unless
   real ticks resolve the order.

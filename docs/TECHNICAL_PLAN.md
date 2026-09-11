@@ -1,6 +1,7 @@
 # Technical Plan
 
-Status: Phase 00 passed; Phase 01 is next.
+Status: Phase 01 passed with a source-driven July 2021 common-window amendment;
+Phase 02 is next.
 
 ## Architecture
 
@@ -35,7 +36,8 @@ Exit: all contracts parse, agree, and are committed before outcome access.
 ## Phase 01 - source qualification
 
 - implement an MQL5 calendar exporter for historical values and metadata;
-- implement Forex Factory retrieval/parsing and an FXStreet fallback adapter;
+- retain Forex Factory and FXStreet as inactive fallbacks; do not scrape them
+  when the MT5 export already preserves the required historical fields;
 - connect the existing MT5 price extractor in read-only mode;
 - inventory core inflation, labour, policy decisions, and two-year yield
   coverage for the six currencies;
@@ -45,7 +47,9 @@ Exit: all contracts parse, agree, and are committed before outcome access.
 
 No FX outcome or strategy PnL is opened in this phase.
 
-Exit: `PASS`, `REVIEW_REQUIRED`, or `FAIL` by mandatory source family.
+Exit: passed. Broker-native M15 density freezes the common start at 2021-07-01.
+Contract v0.2 also forces positions flat before rollover because free historical
+swap schedules did not qualify.
 
 ## Phase 02 - canonical historical data
 

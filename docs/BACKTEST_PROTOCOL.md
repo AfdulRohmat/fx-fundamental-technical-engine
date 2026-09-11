@@ -27,8 +27,11 @@ explicit interpretation.
 
 Entry and exit use the executable bid/ask side. Recorded spread is preferred;
 missing historical spread uses a preregistered, documented broker proxy.
-Commission, swap, and zero/two/five-point added slippage are included. All fills,
-rejections, forced exits, and unavailable prices are recorded.
+Commission and zero/two/five-point added slippage are included. Positions are
+forced flat at 20:45 UTC, before the earliest broker rollover, because no free
+point-in-time historical Exness swap schedule qualified; consequently the
+primary test must contain zero swap-bearing positions. All fills, rejections,
+forced exits, and unavailable prices are recorded.
 
 ## Metrics
 

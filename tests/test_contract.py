@@ -16,6 +16,7 @@ from fx_fundamental_technical.contracts import (
 )
 
 CONTRACT_PATH = Path("config/research_contract_v0_1.json")
+ACTIVE_CONTRACT_PATH = Path("config/research_contract_v0_2.json")
 
 
 def test_registered_contract_is_valid() -> None:
@@ -24,6 +25,19 @@ def test_registered_contract_is_valid() -> None:
     validate_contract(contract)
 
     assert len(contract_sha256(contract)) == 64
+
+
+def test_source_amended_contract_is_valid_and_flat_before_rollover() -> None:
+    contract = load_contract(ACTIVE_CONTRACT_PATH)
+
+    validate_contract(contract)
+
+    risk = contract["risk"]
+    execution = contract["execution"]
+    assert isinstance(risk, dict)
+    assert isinstance(execution, dict)
+    assert risk["flat_before_rollover"] is True
+    assert execution["swap_required_when_crossing_rollover"] is False
 
 
 def test_candidate_cells_are_the_registered_two_by_three_matrix() -> None:

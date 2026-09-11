@@ -1,0 +1,96 @@
+{
+  "schema_version": "0.1",
+  "registered_before_fx_pnl": true,
+  "calendar": {
+    "provider": "MetaTrader 5 Economic Calendar",
+    "timezone": "UTC",
+    "timezone_basis": "Exness server is UTC+0; exporter observed offset 0",
+    "exporter": "mql5/Scripts/ExportEconomicCalendar.mq5"
+  },
+  "macro_series": {
+    "USD": {
+      "country_code": "US",
+      "inflation": "core-pce-price-index-yy",
+      "labour": "unemployment-rate",
+      "policy": "fed-interest-rate-decision",
+      "inflation_target_percent": 2.0
+    },
+    "EUR": {
+      "country_code": "EU",
+      "inflation": "consumer-price-index-ex-food-energy-yy",
+      "labour": "unemployment-rate",
+      "policy": "ecb-deposit-rate-decision",
+      "inflation_target_percent": 2.0
+    },
+    "GBP": {
+      "country_code": "GB",
+      "inflation": "core-cpi-yy",
+      "labour": "unemployment-rate",
+      "policy": "boe-interest-rate-decision",
+      "inflation_target_percent": 2.0
+    },
+    "JPY": {
+      "country_code": "JP",
+      "inflation": "national-consumer-price-index-ex-fresh-food-yy",
+      "labour": "unemployment-rate",
+      "policy": "boj-interest-rate-decision",
+      "inflation_target_percent": 2.0
+    },
+    "AUD": {
+      "country_code": "AU",
+      "inflation": "rba-trimmed-mean-cpi-yy",
+      "labour": "unemployment-rate",
+      "policy": "rba-interest-rate-decision",
+      "inflation_target_percent": 2.5
+    },
+    "CAD": {
+      "country_code": "CA",
+      "inflation": "trimmed-cpi-yy",
+      "labour": "unemployment-rate",
+      "policy": "boc-interest-rate-decision",
+      "inflation_target_percent": 2.0
+    }
+  },
+  "yield_sources": {
+    "USD": {
+      "provider": "Federal Reserve Bank of St. Louis FRED",
+      "series": "DGS2",
+      "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS2&cosd=2017-01-01&coed=2026-09-11"
+    },
+    "EUR": {
+      "provider": "Deutsche Bundesbank",
+      "series": "BBSSY.D.REN.EUR.A610.000000WT0202.A",
+      "url": "https://api.statistiken.bundesbank.de/rest/data/BBSSY/D.REN.EUR.A610.000000WT0202.A?format=csv&lang=en"
+    },
+    "GBP": {
+      "provider": "Bank of England",
+      "series": "UK nominal government spot curve 2.0 years",
+      "url": "https://www.bankofengland.co.uk/-/media/boe/files/statistics/yield-curves/glcnominalddata.zip"
+    },
+    "JPY": {
+      "provider": "Japan Ministry of Finance",
+      "series": "JGB constant-maturity 2Y",
+      "url": "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/historical/jgbcme_all.csv"
+    },
+    "AUD": {
+      "provider": "Reserve Bank of Australia",
+      "series": "FCMYGBAG2D",
+      "url": "https://www.rba.gov.au/statistics/tables/csv/f2-data.csv"
+    },
+    "CAD": {
+      "provider": "Bank of Canada Valet",
+      "series": "BD.CDN.2YR.DQ.YLD",
+      "url": "https://www.bankofcanada.ca/valet/observations/group/bond_yields_all/csv?start_date=2017-01-01"
+    }
+  },
+  "availability_convention": {
+    "market_yield": "observation date plus one business day at 12:00 UTC",
+    "rationale": "uniform conservative lag; avoids assuming same-day public availability across jurisdictions"
+  },
+  "freshness_days": {
+    "inflation": 130,
+    "labour": 70,
+    "policy": 200,
+    "yield": 7
+  }
+}

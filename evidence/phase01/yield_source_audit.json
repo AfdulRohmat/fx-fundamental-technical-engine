@@ -1,0 +1,165 @@
+{
+  "availability_convention": {
+    "market_yield": "observation date plus one business day at 12:00 UTC",
+    "rationale": "uniform conservative lag; avoids assuming same-day public availability across jurisdictions"
+  },
+  "canonical": {
+    "path": "data\\canonical\\yields\\yields_2y.parquet",
+    "rows": 14539,
+    "sha256": "2a4a191076aef287fe96c14ad3c6f75a150bad59e100c39781e57735020d04c2"
+  },
+  "currencies": [
+    {
+      "currency": "AUD",
+      "first_observation": "2017-01-03",
+      "last_observation": "2026-09-09",
+      "maximum_calendar_gap_days": 5,
+      "missing_values": 0,
+      "rows": 2440,
+      "series": "FCMYGBAG2D"
+    },
+    {
+      "currency": "CAD",
+      "first_observation": "2017-01-03",
+      "last_observation": "2026-09-10",
+      "maximum_calendar_gap_days": 5,
+      "missing_values": 0,
+      "rows": 2418,
+      "series": "BD.CDN.2YR.DQ.YLD"
+    },
+    {
+      "currency": "EUR",
+      "first_observation": "2017-01-02",
+      "last_observation": "2026-09-11",
+      "maximum_calendar_gap_days": 6,
+      "missing_values": 0,
+      "rows": 2459,
+      "series": "BBSSY.D.REN.EUR.A610.000000WT0202.A"
+    },
+    {
+      "currency": "GBP",
+      "first_observation": "2017-01-03",
+      "last_observation": "2026-08-28",
+      "maximum_calendar_gap_days": 5,
+      "missing_values": 0,
+      "rows": 2440,
+      "series": "UK nominal government spot curve 2.0 years"
+    },
+    {
+      "currency": "JPY",
+      "first_observation": "2017-01-04",
+      "last_observation": "2026-08-31",
+      "maximum_calendar_gap_days": 11,
+      "missing_values": 0,
+      "rows": 2360,
+      "series": "JGB constant-maturity 2Y"
+    },
+    {
+      "currency": "USD",
+      "first_observation": "2017-01-03",
+      "last_observation": "2026-09-09",
+      "maximum_calendar_gap_days": 4,
+      "missing_values": 0,
+      "rows": 2422,
+      "series": "DGS2"
+    }
+  ],
+  "generated_at_utc": "2026-09-11T13:45:05.374304Z",
+  "parser_version": "official-yield-parsers-v0.1",
+  "raw_files": [
+    {
+      "bytes": 40034,
+      "currency": "USD",
+      "path": "data\\raw\\yields\\usd_fred_dgs2.csv",
+      "sha256": "c29a0d3ff32a5d42065ee2d51787cb84ba90e84afaf0ec6af45136f4c2cf7673",
+      "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS2&cosd=2017-01-01&coed=2026-09-11"
+    },
+    {
+      "bytes": 102890,
+      "currency": "EUR",
+      "path": "data\\raw\\yields\\eur_bundesbank_2y.csv",
+      "sha256": "bb777e50e91a534376c89b3947ab999af2873a64e5876a73f1ff490207622ce5",
+      "url": "https://api.statistiken.bundesbank.de/rest/data/BBSSY/D.REN.EUR.A610.000000WT0202.A?format=csv&lang=en"
+    },
+    {
+      "bytes": 4940295,
+      "currency": "GBP",
+      "path": "data\\raw\\yields\\gbp_boe\\GLC Nominal daily data_1979 to 1984.xlsx",
+      "sha256": "125e27da95ce109e090704d8e8cc6368c7941c8416a2296658a5efc9ae0109d0",
+      "url": "https://www.bankofengland.co.uk/-/media/boe/files/statistics/yield-curves/glcnominalddata.zip"
+    },
+    {
+      "bytes": 3702211,
+      "currency": "GBP",
+      "path": "data\\raw\\yields\\gbp_boe\\GLC Nominal daily data_1985 to 1989.xlsx",
+      "sha256": "508f8a8f0be92acb546b7bc8f78a57ebcd58373f65b859bdfba19dc6761f707b",
+      "url": "https://www.bankofengland.co.uk/-/media/boe/files/statistics/yield-curves/glcnominalddata.zip"
+    },
+    {
+      "bytes": 4675119,
+      "currency": "GBP",
+      "path": "data\\raw\\yields\\gbp_boe\\GLC Nominal daily data_1990 to 1994.xlsx",
+      "sha256": "9717b48bc97882a53954ebe49a215c84c5921e9860853d430f4f6d042236cfec",
+      "url": "https://www.bankofengland.co.uk/-/media/boe/files/statistics/yield-curves/glcnominalddata.zip"
+    },
+    {
+      "bytes": 4824123,
+      "currency": "GBP",
+      "path": "data\\raw\\yields\\gbp_boe\\GLC Nominal daily data_1995 to 1999.xlsx",
+      "sha256": "b4429f40b1c1c3ca898ff4cc87fdb2dd5a6db90e0bc48d5c7b84f9328a1cbfcd",
+      "url": "https://www.bankofengland.co.uk/-/media/boe/files/statistics/yield-curves/glcnominalddata.zip"
+    },
+    {
+      "bytes": 4894295,
+      "currency": "GBP",
+      "path": "data\\raw\\yields\\gbp_boe\\GLC Nominal daily data_2000 to 2004.xlsx",
+      "sha256": "f3ddf65657594ffb7b27eefd0722bfd35cc43c75455031b1422abfa021a584d3",
+      "url": "https://www.bankofengland.co.uk/-/media/boe/files/statistics/yield-curves/glcnominalddata.zip"
+    },
+    {
+      "bytes": 8730872,
+      "currency": "GBP",
+      "path": "data\\raw\\yields\\gbp_boe\\GLC Nominal daily data_2005 to 2015.xlsx",
+      "sha256": "7f79396d8c2c70f6ed3d7040fbbc62cea32feefee70ad1ac11964374135342f6",
+      "url": "https://www.bankofengland.co.uk/-/media/boe/files/statistics/yield-curves/glcnominalddata.zip"
+    },
+    {
+      "bytes": 9106334,
+      "currency": "GBP",
+      "path": "data\\raw\\yields\\gbp_boe\\GLC Nominal daily data_2016 to 2024.xlsx",
+      "sha256": "a85505c7dbf619cea6b3cf39d4e70e8b5eab3fc906d47914006849a1ed3d4a5c",
+      "url": "https://www.bankofengland.co.uk/-/media/boe/files/statistics/yield-curves/glcnominalddata.zip"
+    },
+    {
+      "bytes": 1616317,
+      "currency": "GBP",
+      "path": "data\\raw\\yields\\gbp_boe\\GLC Nominal daily data_2025 to present.xlsx",
+      "sha256": "f49d4ee7cf8e7de796478a547fb67fbfd54e29ce9608b52764c94411aec5cd3d",
+      "url": "https://www.bankofengland.co.uk/-/media/boe/files/statistics/yield-curves/glcnominalddata.zip"
+    },
+    {
+      "bytes": 1193668,
+      "currency": "JPY",
+      "path": "data\\raw\\yields\\jpy_mof_jgbcme_all.csv",
+      "sha256": "997a8f95dc20c884d506c627ac075b1e93a357410094058ac19f3effead2e353",
+      "url": "https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/historical/jgbcme_all.csv"
+    },
+    {
+      "bytes": 200450,
+      "currency": "AUD",
+      "path": "data\\raw\\yields\\aud_rba_f2.csv",
+      "sha256": "ef130f293a446dca8ff3480b6d8673ec92da90e2a907bdbab6ec51cf05870777",
+      "url": "https://www.rba.gov.au/statistics/tables/csv/f2-data.csv"
+    },
+    {
+      "bytes": 223271,
+      "currency": "CAD",
+      "path": "data\\raw\\yields\\cad_boc_bond_yields_all.csv",
+      "sha256": "32880f5029b91bcd0a53a07f0cec81c60835bfe5d0632dc6bc50ad9da7b53e8c",
+      "url": "https://www.bankofcanada.ca/valet/observations/group/bond_yields_all/csv?start_date=2017-01-01"
+    }
+  ],
+  "schema_version": "1.0",
+  "status": "QUALIFIED_WITH_CONSERVATIVE_AVAILABILITY_LAG",
+  "summary_sha256": "ceb2b5eecb6e2123d42909db03b3aadb5dd14d13edb8aa7484a17e37123a73b8"
+}

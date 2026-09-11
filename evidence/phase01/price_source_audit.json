@@ -1,0 +1,128 @@
+{
+  "broker": {
+    "company": "Exness Technologies Ltd",
+    "currency": "USD",
+    "server": "Exness-MT5Trial7"
+  },
+  "extractor_version": "fx-hybrid-mt5-history-v0.1",
+  "observed_at_utc": "2026-09-11T13:28:40.132719Z",
+  "raw_files": [
+    {
+      "broker_symbol": "EURUSD",
+      "bytes": 3062408,
+      "path": "data\\raw\\mt5_m15\\eurusd_m15.parquet",
+      "requested_symbol": "EURUSD",
+      "sha256": "8b8469d2da0c0f93a76e923e64e2d3dc44d75bb955128c37766cbaa5f6aecf1d"
+    },
+    {
+      "broker_symbol": "GBPUSD",
+      "bytes": 3160266,
+      "path": "data\\raw\\mt5_m15\\gbpusd_m15.parquet",
+      "requested_symbol": "GBPUSD",
+      "sha256": "b01a6282ec254982303d012d276904f920cb77475b1a999dd400ae4e2dc9c469"
+    },
+    {
+      "broker_symbol": "USDJPY",
+      "bytes": 3098444,
+      "path": "data\\raw\\mt5_m15\\usdjpy_m15.parquet",
+      "requested_symbol": "USDJPY",
+      "sha256": "0dc47950d608f6b840d578da24d447da93baa43b296cc59847cd8fc1412d1048"
+    },
+    {
+      "broker_symbol": "AUDUSD",
+      "bytes": 2745402,
+      "path": "data\\raw\\mt5_m15\\audusd_m15.parquet",
+      "requested_symbol": "AUDUSD",
+      "sha256": "8059b246773c6691de2bfa53ba3bf0fb42b16c64b47be2c0c8c291eb8a289b47"
+    },
+    {
+      "broker_symbol": "USDCAD",
+      "bytes": 2962724,
+      "path": "data\\raw\\mt5_m15\\usdcad_m15.parquet",
+      "requested_symbol": "USDCAD",
+      "sha256": "ccf12c7ac532401e467535d02edd5e9941a6444ea6e73a99ff60b53c815f3c53"
+    }
+  ],
+  "requested_end_utc": "2026-09-11T13:00:00+00:00",
+  "requested_start_utc": "2017-01-01T00:00:00+00:00",
+  "safety": {
+    "credentials_persisted": false,
+    "pnl_calculated": false,
+    "read_only": true,
+    "returns_calculated": false
+  },
+  "schema_version": "1.0",
+  "status": "EXTRACTED_FOR_SOURCE_QUALIFICATION",
+  "summary_sha256": "a1d5443e61d5edc81b22e6db5bfa53680ae16e67ed618edd7ee5c348ccf827b9",
+  "symbols": [
+    {
+      "duplicate_timestamps": 0,
+      "first_bar_utc": "2017-01-03T00:00:00+00:00",
+      "inconsistent_ohlc_rows": 0,
+      "last_bar_utc": "2026-09-11T13:00:00+00:00",
+      "nonpositive_ohlc_rows": 0,
+      "positive_spread_fraction": 0.10159639847764598,
+      "positive_tick_volume_fraction": 1.0,
+      "rows": 135054,
+      "spread_points_median": 0.0,
+      "spread_points_p95": 23.0,
+      "symbol": "EURUSD"
+    },
+    {
+      "duplicate_timestamps": 0,
+      "first_bar_utc": "2017-01-03T00:00:00+00:00",
+      "inconsistent_ohlc_rows": 0,
+      "last_bar_utc": "2026-09-11T13:00:00+00:00",
+      "nonpositive_ohlc_rows": 0,
+      "positive_spread_fraction": 0.31635728195597285,
+      "positive_tick_volume_fraction": 1.0,
+      "rows": 135053,
+      "spread_points_median": 0.0,
+      "spread_points_p95": 36.0,
+      "symbol": "GBPUSD"
+    },
+    {
+      "duplicate_timestamps": 0,
+      "first_bar_utc": "2017-01-03T00:00:00+00:00",
+      "inconsistent_ohlc_rows": 0,
+      "last_bar_utc": "2026-09-11T13:00:00+00:00",
+      "nonpositive_ohlc_rows": 0,
+      "positive_spread_fraction": 0.13390840768575765,
+      "positive_tick_volume_fraction": 1.0,
+      "rows": 135055,
+      "spread_points_median": 0.0,
+      "spread_points_p95": 28.0,
+      "symbol": "USDJPY"
+    },
+    {
+      "duplicate_timestamps": 0,
+      "first_bar_utc": "2017-01-03T00:00:00+00:00",
+      "inconsistent_ohlc_rows": 0,
+      "last_bar_utc": "2026-09-11T13:00:00+00:00",
+      "nonpositive_ohlc_rows": 0,
+      "positive_spread_fraction": 0.3877020592830644,
+      "positive_tick_volume_fraction": 1.0,
+      "rows": 135047,
+      "spread_points_median": 0.0,
+      "spread_points_p95": 24.0,
+      "symbol": "AUDUSD"
+    },
+    {
+      "duplicate_timestamps": 0,
+      "first_bar_utc": "2017-01-03T00:00:00+00:00",
+      "inconsistent_ohlc_rows": 0,
+      "last_bar_utc": "2026-09-11T13:00:00+00:00",
+      "nonpositive_ohlc_rows": 0,
+      "positive_spread_fraction": 0.2345383726785344,
+      "positive_tick_volume_fraction": 1.0,
+      "rows": 135044,
+      "spread_points_median": 0.0,
+      "spread_points_p95": 40.0,
+      "symbol": "USDCAD"
+    }
+  ],
+  "terminal": {
+    "build": 6182,
+    "max_bars": 100000000
+  }
+}
