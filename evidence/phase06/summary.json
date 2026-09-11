@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "status": "NOT_RUN",
+  "reason": "Phase 05 produced no candidate eligible for promotion",
+  "promoted_candidate": null,
+  "locked_start_utc": "2025-08-28T00:00:00Z",
+  "locked_end_exclusive_utc": "2026-09-11T00:00:00Z",
+  "locked_strategy_runs_consumed": 0,
+  "locked_trade_metrics_calculated": false,
+  "locked_ledger_created": false,
+  "mql5_candidate_parity_run": false,
+  "real_tick_candidate_validation_run": false,
+  "tuning_after_validation": false,
+  "operational_permission": "DENIED"
+}

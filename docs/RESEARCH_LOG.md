@@ -83,3 +83,13 @@ Status: no candidate promoted; locked test remains unopened.
 - F2_T1 was positive but had only 59 validation trades versus the minimum 100.
 - The remaining four cells were negative. No pair, year, cost, or threshold was
   changed after observing these results.
+
+## Phase 06 - locked test
+
+Status: not run.
+
+- No Phase 05 candidate passed every promotion check, so the locked runner was
+  not authorized.
+- Zero locked strategy runs were consumed; no locked ledger or metric exists.
+- MQL5 candidate parity and real-tick candidate validation were not run because
+  there is no frozen candidate to reconcile.
