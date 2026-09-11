@@ -1,0 +1,31 @@
+{
+  "schema_version": "0.1",
+  "registered_before_fx_returns": true,
+  "active_research_contract": "config/research_contract_v0_2.json",
+  "macro_training_start_utc": "2017-01-01T00:00:00Z",
+  "price_start_inclusive_utc": "2021-07-01T00:00:00Z",
+  "price_end_exclusive_utc": "2026-09-11T00:00:00Z",
+  "daily_snapshot_time_utc": "06:00:00",
+  "splits": {
+    "development": {
+      "start_inclusive_utc": "2021-07-01T00:00:00Z",
+      "end_exclusive_utc": "2024-08-13T00:00:00Z"
+    },
+    "validation": {
+      "start_inclusive_utc": "2024-08-13T00:00:00Z",
+      "end_exclusive_utc": "2025-08-28T00:00:00Z"
+    },
+    "locked_test": {
+      "start_inclusive_utc": "2025-08-28T00:00:00Z",
+      "end_exclusive_utc": "2026-09-11T00:00:00Z"
+    }
+  },
+  "calendar_server_utc_offset_seconds": 0,
+  "calendar_release_availability": "release epoch",
+  "yield_availability": "observation date plus one business day at 12:00 UTC",
+  "high_impact_blackout_importance": 3,
+  "raw_calendar_snapshot": "data/raw/mt5_calendar/20260911/calendar_export.tsv",
+  "raw_price_root": "data/raw/mt5_m15",
+  "raw_yield_root": "data/raw/yields",
+  "source_yield_canonical": "data/canonical/yields/yields_2y.parquet"
+}

@@ -1,0 +1,79 @@
+{
+  "artifacts": [
+    {
+      "first_timestamp": "2017-01-04T10:00:00+00:00",
+      "last_timestamp": "2026-09-10T12:15:00+00:00",
+      "name": "macro_releases",
+      "path": "data\\canonical\\phase02\\macro_releases.parquet",
+      "rows": 1923,
+      "sha256": "0d6917b8ae4b7c859ab61d006913affc385c53cf4adce0a1107d9f3f7992b6ad"
+    },
+    {
+      "first_timestamp": "2017-01-04T10:00:00+00:00",
+      "last_timestamp": "2026-09-10T12:15:00+00:00",
+      "name": "macro_vintages",
+      "path": "data\\canonical\\phase02\\macro_vintages.parquet",
+      "rows": 2175,
+      "sha256": "098565c3492d5cc17864beb9a089e4b243a9f619223e9ab2cae487babb856a61"
+    },
+    {
+      "first_timestamp": "2017-01-02T06:00:00+00:00",
+      "last_timestamp": "2026-09-10T06:00:00+00:00",
+      "name": "daily_macro_states",
+      "path": "data\\canonical\\phase02\\daily_macro_states.parquet",
+      "rows": 15174,
+      "sha256": "b503762a03eff52bf0f94e68e5fec97a900374b0930a38fab5d8e54b47df2803"
+    },
+    {
+      "first_timestamp": "2021-07-01T07:00:00+00:00",
+      "last_timestamp": "2026-09-10T17:00:00+00:00",
+      "name": "high_impact_events",
+      "path": "data\\canonical\\phase02\\high_impact_events.parquet",
+      "rows": 4290,
+      "sha256": "4a464b17a2191dbc84a807ebb051c6bb87be8f90bf1e03d48ffbd69b939ea721"
+    },
+    {
+      "first_timestamp": "2021-07-01T00:00:00+00:00",
+      "last_timestamp": "2026-09-10T23:45:00+00:00",
+      "name": "m15_prices",
+      "path": "data\\canonical\\phase02\\m15_prices.parquet",
+      "rows": 647968,
+      "sha256": "a518b3929afb3369d77e56265f546a7675efc4755968c13ed2d258dd1da16b50"
+    },
+    {
+      "first_timestamp": "2017-01-03T12:00:00+00:00",
+      "last_timestamp": "2026-09-10T12:00:00+00:00",
+      "name": "two_year_yields",
+      "path": "data\\canonical\\phase02\\two_year_yields.parquet",
+      "rows": 14536,
+      "sha256": "630739ab53bd451b591994faca41785db0171ea9e4a54c4b5357f4e494db821b"
+    }
+  ],
+  "builder_version": "point-in-time-canonical-v0.1",
+  "dataset_contract": "config\\dataset_contract_v0_1.json",
+  "dataset_contract_sha256": "71a5a4db12c86f633138b6d9e3a8c5d6f6fd83f3bf28c61ca1ed965a2cf3b3af",
+  "generated_at_utc": "2026-09-11T14:01:46.780684Z",
+  "outcome_firewall": {
+    "fx_returns_calculated": false,
+    "strategy_pnl_calculated": false
+  },
+  "quality": {
+    "lag_references_precede_current_references": true,
+    "macro_value_ids_unique": true,
+    "price_duplicate_pair_times": 0,
+    "price_pairs": [
+      "AUDUSD",
+      "EURUSD",
+      "GBPUSD",
+      "USDCAD",
+      "USDJPY"
+    ],
+    "state_release_times_not_after_snapshot": true,
+    "state_rows_available": 14571,
+    "state_rows_total": 15174,
+    "vintage_revisions": 252
+  },
+  "schema_version": "1.0",
+  "status": "PASS",
+  "summary_sha256": "6f9ae6fdb695b18ea9665302f407cf84d28674831e1cf65abab655c86f075d66"
+}

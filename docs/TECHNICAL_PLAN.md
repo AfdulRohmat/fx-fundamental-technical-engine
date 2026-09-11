@@ -1,7 +1,6 @@
 # Technical Plan
 
-Status: Phase 01 passed with a source-driven July 2021 common-window amendment;
-Phase 02 is next.
+Status: Phase 02 point-in-time data passed; Phase 03 fundamental bias is next.
 
 ## Architecture
 
@@ -63,6 +62,9 @@ swap schedules did not qualify.
 - prove as-of joins and revision behavior with unit and integration tests.
 
 Exit: a hashed, replayable dataset and coverage report.
+
+Result: passed. Split boundaries and six canonical artifact hashes are frozen
+in `evidence/phase02/canonical_data_audit.json`.
 
 ## Phase 03 - fundamental bias
 

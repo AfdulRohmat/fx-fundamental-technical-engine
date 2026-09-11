@@ -29,10 +29,10 @@ to `FLAT`.
 
 ## Status
 
-Phase 01 source qualification passed. The active pre-PnL contract is v0.2; it
-uses a July 2021 common M15 start and forces all positions flat before rollover.
-No historical outcome may be read until Phase 02 point-in-time reconstruction
-and bias freezing complete.
+Phase 02 point-in-time reconstruction passed. The active pre-PnL contract is
+v0.2; it uses a July 2021 common M15 start and forces all positions flat before
+rollover. Split boundaries are frozen. No historical strategy outcome may be
+read until the Phase 03 bias artifact is built and frozen.
 
 See [the PRD](docs/PRD.md), [technical plan](docs/TECHNICAL_PLAN.md), and
 [research log](docs/RESEARCH_LOG.md).

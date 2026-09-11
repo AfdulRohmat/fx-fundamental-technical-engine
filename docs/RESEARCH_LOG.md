@@ -28,3 +28,18 @@ Status: passed with source-driven amendments.
   qualify. SHA-256:
   `94d4f5f23a7d4b5912151aed5534f25cf89171f9247e19c55da279e88d79cf67`.
 - FX returns and strategy PnL remained closed throughout qualification.
+
+## Phase 02 - canonical point-in-time data
+
+Status: passed.
+
+- Reconstructed 1,923 releases, 2,175 vintages, and 15,174 daily currency
+  states; 252 previous-period revisions are effective only when later known.
+- Froze 647,968 M15 bars, 4,290 high-impact event times, and 14,536 yield
+  observations.
+- Registered the exact development, validation, and locked-test dates in
+  `config/dataset_contract_v0_1.json` before any FX return or PnL calculation.
+- Four USD snapshot-days fail closed because a mandatory input exceeds its
+  freshness limit; no forward-fill exception or imputation was introduced.
+- Dataset contract SHA-256:
+  `71a5a4db12c86f633138b6d9e3a8c5d6f6fd83f3bf28c61ca1ed965a2cf3b3af`.
