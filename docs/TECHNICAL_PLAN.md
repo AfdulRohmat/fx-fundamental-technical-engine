@@ -150,3 +150,19 @@ validation but did not pass promotion, so the locked test was correctly not run.
 
 Only `PROCEED_TO_FORWARD_DEMO` authorizes Phase 08-11: live collectors,
 Telegram notifier, demo EA integration, and frozen forward-test monitoring.
+
+## Phase 08 - exit asymmetry research
+
+Status: active under a new information boundary. This research phase is not the
+previously reserved operational Phase 08.
+
+- retain F2_T3 entries and every existing cost and portfolio constraint;
+- compare the frozen two-R control with one no-target, VWAP-invalidation exit;
+- measure MFE/MAE and continuation beyond two R without using those paths to
+  tune parameters;
+- treat all observations before 2025-08-28 as development;
+- keep the 2025-08-28 to 2026-09-11 chronological slice locked;
+- promote at most one exit only if every pre-registered robustness gate passes.
+
+Exit: `CANDIDATE_FROZEN` or `NO_PROMOTION`. A locked run is a separate phase and
+is forbidden unless the candidate is frozen first.

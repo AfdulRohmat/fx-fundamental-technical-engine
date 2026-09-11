@@ -1,0 +1,60 @@
+{
+  "schema_version": "0.1",
+  "experiment_id": "F2_T3_E1_VWAP_INVALIDATION",
+  "registered_at_utc": "2026-09-11T15:03:06Z",
+  "registered_before_new_path_outcomes": true,
+  "base_candidate": "F2_T3",
+  "development_start_utc": "2021-07-01T00:00:00Z",
+  "development_end_exclusive_utc": "2025-08-28T00:00:00Z",
+  "locked_start_utc": "2025-08-28T00:00:00Z",
+  "locked_end_exclusive_utc": "2026-09-11T00:00:00Z",
+  "locked_outcomes_allowed": false,
+  "parameter_grid_allowed": false,
+  "control": {
+    "id": "E0_FIXED_2R",
+    "initial_stop_atr": 1.0,
+    "fixed_target_r": 2.0
+  },
+  "candidate": {
+    "id": "E1_VWAP_INVALIDATION",
+    "initial_stop_atr": 1.0,
+    "fixed_target_r": null,
+    "invalidation": "LONG_CLOSE_BELOW_VWAP_SHORT_CLOSE_ABOVE_VWAP",
+    "invalidation_observation": "COMPLETED_M15_CLOSE",
+    "execution": "NEXT_AVAILABLE_M15_OPEN",
+    "vwap_anchor": "08:00_EUROPE_LONDON",
+    "vwap_update_end": "17:00_EUROPE_LONDON",
+    "vwap_after_update_end": "FREEZE_LAST_SESSION_VALUE",
+    "stop_never_widens": true,
+    "bias_flip_exit": true,
+    "rollover_flat_utc": "20:45"
+  },
+  "path_diagnostic": {
+    "mfe_thresholds_r": [1.0, 2.0, 3.0, 4.0, 5.0],
+    "continuation_condition_r": 2.0,
+    "use_executable_bid_ask_extrema": true,
+    "same_bar_ambiguity": "ADVERSE_FIRST"
+  },
+  "promotion_gate": {
+    "minimum_development_trades": 500,
+    "requires_positive_expectancy": true,
+    "requires_improvement_over_control": true,
+    "maximum_drawdown_r": 25.0,
+    "minimum_positive_pairs": 3,
+    "minimum_positive_calendar_years": 3,
+    "maximum_single_pair_positive_profit_share": 0.5,
+    "bootstrap_block_months": 3,
+    "bootstrap_resamples": 2000,
+    "requires_positive_bootstrap_lower_bound": true,
+    "stress_slippage_points": [2, 5],
+    "two_point_slippage_must_remain_positive": true,
+    "five_point_slippage_floor_r": -0.05,
+    "one_bar_exit_delay_must_remain_positive": true
+  },
+  "iteration_policy": {
+    "select_at_most_one_candidate": true,
+    "no_parameter_tuning_after_development": true,
+    "locked_run_only_if_every_gate_passes": true,
+    "no_tuning_after_locked_run": true
+  }
+}

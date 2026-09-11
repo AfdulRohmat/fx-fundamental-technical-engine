@@ -30,6 +30,25 @@ mechanism is not treated as evidence that this implementation has an edge.
 - Huang, Li, Wang, and Zhou (2020), *Time series momentum: Is it there?* Adds a
   replication warning against treating a published anomaly as universal.
 
+## Exit asymmetry and stop policies
+
+- Kaminski and Lo (2014), *When do stop-loss rules stop losses?*, Journal of
+  Financial Markets, DOI `10.1016/j.finmar.2013.07.001`. Stop policies can add
+  value under return persistence but subtract expected return under a random
+  walk; a stop is therefore conditional machinery, not a universal edge.
+- Osler (2005), *Stop-loss orders and price cascades in currency markets*,
+  Journal of International Money and Finance, DOI
+  `10.1016/j.jimonfin.2004.12.002`. FX stop clusters can propagate trends over
+  intraday horizons and support testing continuation rather than assuming it.
+- Odean (1998), *Are investors reluctant to realize their losses?*, Journal of
+  Finance, DOI `10.1111/0022-1082.00072`. The documented disposition effect
+  motivates mechanical loss and profit handling but does not establish that a
+  particular exit rule earns an economic premium.
+- Leung and Zhang (2019), *Optimal trading with a trailing stop*, Applied
+  Mathematics and Optimization, DOI `10.1007/s00245-017-9481-1`. Trailing exits
+  are path-dependent optimal-stopping rules whose usefulness depends on the
+  assumed price process; Phase 08 therefore tests only one thesis-linked exit.
+
 ## Operational sources
 
 - MetaTrader 5 Economic Calendar documentation defines actual, forecast,
