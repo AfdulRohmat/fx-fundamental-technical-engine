@@ -221,13 +221,27 @@ def build_daily_macro_states(
 ) -> pd.DataFrame:
     """Build 06:00 UTC latest-known states with revision-aware 3m lags."""
 
+    dates = pd.date_range(start, end_exclusive, freq="B", inclusive="left", tz="UTC")
+    snapshots = dates.normalize() + pd.Timedelta(hours=6)
+    return build_macro_states_at_snapshots(releases, vintages, registry_path, snapshots)
+
+
+def build_macro_states_at_snapshots(
+    releases: pd.DataFrame,
+    vintages: pd.DataFrame,
+    registry_path: Path,
+    snapshots: pd.DatetimeIndex,
+) -> pd.DataFrame:
+    """Build latest-known states at an arbitrary sorted UTC snapshot schedule."""
+
+    if snapshots.tz is None or str(snapshots.tz) != "UTC":
+        raise CanonicalDataError("macro snapshot schedule must be UTC-aware")
+    snapshots = snapshots.sort_values().unique()
     registry = _json_object(registry_path)
     freshness = registry.get("freshness_days")
     mappings = registry.get("macro_series")
     if not isinstance(freshness, dict) or not isinstance(mappings, dict):
         raise CanonicalDataError("registry freshness or macro mapping invalid")
-    dates = pd.date_range(start, end_exclusive, freq="B", inclusive="left", tz="UTC")
-    snapshots = dates.normalize() + pd.Timedelta(hours=6)
     records: list[dict[str, object]] = []
     for currency in sorted(mappings):
         state: dict[str, _StateCursor] = {}

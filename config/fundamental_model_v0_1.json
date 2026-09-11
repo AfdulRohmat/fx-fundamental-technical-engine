@@ -1,0 +1,40 @@
+{
+  "schema_version": "0.1",
+  "registered_before_fx_returns": true,
+  "model_version": "structural-policy-ridge-v0.1",
+  "currencies": ["USD", "EUR", "GBP", "JPY", "AUD", "CAD"],
+  "pairs": ["EURUSD", "GBPUSD", "USDJPY", "AUDUSD", "USDCAD"],
+  "features": [
+    "inflation_gap",
+    "inflation_momentum_3m",
+    "labour_tightness",
+    "labour_momentum_3m",
+    "policy_rate",
+    "policy_change_3m_bp"
+  ],
+  "nonnegative_features": [
+    "inflation_gap",
+    "inflation_momentum_3m",
+    "labour_tightness",
+    "labour_momentum_3m"
+  ],
+  "target": "subsequent_six_month_policy_rate_change_bp",
+  "fit_frequency": "calendar_month",
+  "ridge_penalties": [0.1, 1.0, 10.0, 100.0],
+  "inner_validation_origins": 6,
+  "minimum_training_months_per_currency": 24,
+  "minimum_pooled_training_rows": 144,
+  "one_month_revision_lag": "one calendar month",
+  "f1_rule": "level and one-month revision divergence must share a nonzero sign",
+  "f2_yield_change_observations": 20,
+  "event_snapshot_delay_minutes": 30,
+  "event_snapshot_rounding": "ceil to next M15 boundary",
+  "daily_snapshot_time_utc": "06:00:00",
+  "policy_diagnostic_bootstrap": {
+    "block_length_months": 3,
+    "resamples": 2000,
+    "seed": 20260911
+  },
+  "missingness": "fail closed to FLAT",
+  "random_seed": 20260911
+}

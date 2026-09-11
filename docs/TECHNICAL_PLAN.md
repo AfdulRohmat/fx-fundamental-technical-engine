@@ -1,6 +1,7 @@
 # Technical Plan
 
-Status: Phase 02 point-in-time data passed; Phase 03 fundamental bias is next.
+Status: Phase 03 bias is frozen; its policy diagnostic is not statistically
+supported. Phase 04 technical baselines are next.
 
 ## Architecture
 
@@ -83,6 +84,10 @@ in `evidence/phase02/canonical_data_audit.json`.
 
 Exit: policy-skill diagnostic, bias coverage report, immutable bias CSV, and
 hash manifest.
+
+Result: the artifact passed integrity checks and remained isolated from FX
+outcomes. Its MAE point estimate beat both policy baselines, but both paired
+bootstrap intervals crossed zero; the diagnostic is `NOT_SUPPORTED`.
 
 ## Phase 04 - technical baselines
 

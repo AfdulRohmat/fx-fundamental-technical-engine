@@ -1,0 +1,61 @@
+{
+  "bias_direction_counts": {
+    "F1": {
+      "FLAT": 4843,
+      "LONG_BASE": 3517,
+      "SHORT_BASE": 3195
+    },
+    "F2": {
+      "FLAT": 7616,
+      "LONG_BASE": 2173,
+      "SHORT_BASE": 1766
+    }
+  },
+  "currency_prediction_rows": 14100,
+  "freeze_path": "evidence\\phase03\\bias_freeze.json",
+  "freeze_sha256": "6b3451bddebc5f66be9d32b049e339e66adac1c34592853079ef76f2c269d7e4",
+  "fx_returns_accessed": false,
+  "monthly_models": 64,
+  "monthly_panel_rows": 702,
+  "pair_bias_rows": 11555,
+  "policy_diagnostic": {
+    "currencies": [
+      "AUD",
+      "CAD",
+      "EUR",
+      "GBP",
+      "JPY",
+      "USD"
+    ],
+    "directional_accuracy_nonzero": 0.9105691056910569,
+    "mae_bp": {
+      "no_change": 59.583333333333336,
+      "structural_model": 50.95064899289595,
+      "three_month_momentum": 63.979885057471265
+    },
+    "months": 58,
+    "paired_mae_improvement_95_ci_bp": {
+      "no_change": [
+        -1.1078388794344296,
+        19.956583270372757
+      ],
+      "three_month_momentum": [
+        -0.3171130932304601,
+        26.671891837977917
+      ]
+    },
+    "rows": 348,
+    "status": "NOT_SUPPORTED"
+  },
+  "post_event_snapshot_times": 977,
+  "schema_version": "1.0",
+  "selected_penalty_counts": {
+    "0.1": 12,
+    "1.0": 1,
+    "10.0": 5,
+    "100.0": 46
+  },
+  "status": "PASS_BIAS_FROZEN",
+  "strategy_pnl_accessed": false,
+  "summary_sha256": "40ba11919be2070f9e5e966aac36162a588546336278be99a8465dfa5267b163"
+}

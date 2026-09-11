@@ -1,0 +1,34 @@
+{
+  "builder_version": "structural-policy-bias-v0.1",
+  "files": [
+    {
+      "bytes": 70162,
+      "name": "monthly_policy_panel",
+      "path": "data\\canonical\\phase03\\monthly_policy_panel.parquet",
+      "sha256": "d79a65d59417ecc4c2b31c58d7b76712c43d9ddaa64b92cb26e44f2cbd7c3771"
+    },
+    {
+      "bytes": 91727,
+      "name": "currency_predictions",
+      "path": "data\\canonical\\phase03\\currency_predictions.parquet",
+      "sha256": "d4f436761ddda84ccad05cf569a9d4e2019261e56455edada712e28d5fad76ab"
+    },
+    {
+      "bytes": 531130,
+      "name": "pair_bias",
+      "path": "data\\canonical\\phase03\\pair_bias.parquet",
+      "sha256": "06b7bccd4a7e10aac8cd7ecaa5458def1776319f70b4260b40d4dc30548cb6b2"
+    },
+    {
+      "bytes": 428989,
+      "name": "model_audit",
+      "path": "data\\canonical\\phase03\\model_audit.json",
+      "sha256": "245d4b23224328caa4aa787bd641591cf2c8bb00f66dfe5f20c1f062154ae1f4"
+    }
+  ],
+  "fx_inputs_accepted": false,
+  "model_config": "config\\fundamental_model_v0_1.json",
+  "model_config_sha256": "0f1c5ad304ac3a16dcf442f068293750b1a077513a33d99cd8f7080483faf819",
+  "schema_version": "1.0",
+  "summary_sha256": "7dfea764f0f02e7db5c088566c36ffae0a90d862fb59a979216096145c767b0c"
+}

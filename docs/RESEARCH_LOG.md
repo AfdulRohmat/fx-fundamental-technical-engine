@@ -43,3 +43,17 @@ Status: passed.
   freshness limit; no forward-fill exception or imputation was introduced.
 - Dataset contract SHA-256:
   `71a5a4db12c86f633138b6d9e3a8c5d6f6fd83f3bf28c61ca1ed965a2cf3b3af`.
+
+## Phase 03 - structural policy bias freeze
+
+Status: bias frozen; policy-skill diagnostic not supported.
+
+- Fit 64 expanding monthly models using future six-month policy change only
+  after each label was fully known. FX inputs were structurally absent.
+- Structural model MAE was 50.95 bp versus 59.58 bp for no change and 63.98 bp
+  for three-month policy momentum; nonzero-direction accuracy was 91.1%.
+- The paired three-month-block bootstrap intervals crossed zero versus both
+  baselines, so the apparent improvement is not statistically secure.
+- Frozen F1 is directional 58.1% of snapshots; F2 yield confirmation is
+  directional 34.1%. The remaining states are `FLAT` by contract.
+- All four files in `evidence/phase03/bias_freeze.json` re-verified by SHA-256.
