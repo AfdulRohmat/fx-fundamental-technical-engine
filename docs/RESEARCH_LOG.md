@@ -57,3 +57,15 @@ Status: bias frozen; policy-skill diagnostic not supported.
 - Frozen F1 is directional 58.1% of snapshots; F2 yield confirmation is
   directional 34.1%. The remaining states are `FLAT` by contract.
 - All four files in `evidence/phase03/bias_freeze.json` re-verified by SHA-256.
+
+## Phase 04 - technical-only baselines
+
+Status: implementation passed; economics negative.
+
+- Executed T1/T2/T3 through validation with the locked slice closed.
+- Validation net expectancy was -0.1009R for T1, -0.1002R for T2, and -0.1804R
+  for T3. All three profit factors were below one.
+- The observed win-rate band is consistent with a 2R target's raw break-even
+  area, but maximum Raw commission is material against a one-M15-ATR stop.
+- No rule or parameter was removed after observing the negative baselines. The
+  complete six-cell hybrid matrix remains registered for Phase 05.

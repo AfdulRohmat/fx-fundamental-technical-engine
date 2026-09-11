@@ -32,8 +32,10 @@ to `FLAT`.
 Phase 03 bias reconstruction is frozen without reading FX outcomes. The policy
 forecast improves both baselines in point estimate, but its block-bootstrap
 intervals cross zero, so policy skill is `NOT_SUPPORTED`. The project continues
-to the pre-registered technical and hybrid tests with that caveat fixed in the
-record; it is not retroactively tuned away.
+with that caveat fixed in the record. Phase 04 found all three technical-only
+baselines negative after registered costs; Phase 05 tests whether the frozen
+fundamental permission filter adds enough value to become positive, not merely
+whether it reduces losses.
 
 See [the PRD](docs/PRD.md), [technical plan](docs/TECHNICAL_PLAN.md), and
 [research log](docs/RESEARCH_LOG.md).

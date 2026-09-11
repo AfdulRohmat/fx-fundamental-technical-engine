@@ -1,7 +1,7 @@
 # Technical Plan
 
-Status: Phase 03 bias is frozen; its policy diagnostic is not statistically
-supported. Phase 04 technical baselines are next.
+Status: Phase 04 baselines are complete and negative after costs. Phase 05 may
+test the frozen six-cell hybrid matrix without changing technical rules.
 
 ## Architecture
 
@@ -100,6 +100,9 @@ bootstrap intervals crossed zero; the diagnostic is `NOT_SUPPORTED`.
 
 Exit: three technical-only baseline reports. No rule is removed merely because
 its standalone return is unattractive.
+
+Result: passed as an implementation gate. All development and validation
+baselines are negative after cost; locked outcomes remain unopened.
 
 ## Phase 05 - hybrid development and validation
 
