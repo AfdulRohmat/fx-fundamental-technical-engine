@@ -175,3 +175,18 @@ Result: E1 improved development expectancy from -0.1193R to -0.0266R and
 created genuine right-tail winners, but failed every economic and robustness
 gate except sample size and improvement over control. The locked slice remained
 closed and no candidate freeze was created.
+
+## Phase 09 - one-bar VWAP acceptance
+
+Status: active under a new pre-registered contract.
+
+- preserve F2 as the required directional permission;
+- preserve the Phase 08 E1 no-target exit;
+- observe one complete M15 candle after T3 reclaim and enter only if its close
+  remains on the reclaimed side of causal London VWAP;
+- re-evaluate F2 at the actual delayed entry;
+- compare against immediate entry, technical-only acceptance, three bias
+  placebos, execution delay, and slippage stress;
+- keep the existing locked interval closed unless every gate passes.
+
+Exit: `CANDIDATE_FROZEN` or `NO_PROMOTION`.

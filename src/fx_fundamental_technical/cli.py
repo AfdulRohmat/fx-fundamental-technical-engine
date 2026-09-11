@@ -9,6 +9,7 @@ from datetime import UTC, datetime
 from pathlib import Path
 from typing import cast
 
+from fx_fundamental_technical.acceptance_research import run_phase09
 from fx_fundamental_technical.calendar_export import inventory_calendar
 from fx_fundamental_technical.exit_research import run_phase08
 from fx_fundamental_technical.mt5_history import run_price_source_audit
@@ -88,6 +89,58 @@ def _parser() -> argparse.ArgumentParser:
         type=Path,
         default=Path("evidence/phase08/summary.json"),
     )
+
+    acceptance = commands.add_parser("phase09-acceptance-research")
+    acceptance.add_argument(
+        "--contract",
+        type=Path,
+        default=Path("config/acceptance_research_v0_1.json"),
+    )
+    acceptance.add_argument(
+        "--execution",
+        type=Path,
+        default=Path("config/execution_model_v0_1.json"),
+    )
+    acceptance.add_argument(
+        "--bias-freeze",
+        type=Path,
+        default=Path("evidence/phase03/bias_freeze.json"),
+    )
+    acceptance.add_argument(
+        "--bias",
+        type=Path,
+        default=Path("data/canonical/phase03/pair_bias.parquet"),
+    )
+    acceptance.add_argument(
+        "--prices",
+        type=Path,
+        default=Path("data/canonical/phase02/m15_prices.parquet"),
+    )
+    acceptance.add_argument(
+        "--events",
+        type=Path,
+        default=Path("data/canonical/phase02/high_impact_events.parquet"),
+    )
+    acceptance.add_argument(
+        "--signals",
+        type=Path,
+        default=Path("data/canonical/phase04/t3_signals.parquet"),
+    )
+    acceptance.add_argument(
+        "--immediate-control",
+        type=Path,
+        default=Path("data/canonical/phase08/e1_primary_ledger.parquet"),
+    )
+    acceptance.add_argument(
+        "--output-root",
+        type=Path,
+        default=Path("data/canonical/phase09"),
+    )
+    acceptance.add_argument(
+        "--evidence",
+        type=Path,
+        default=Path("evidence/phase09/summary.json"),
+    )
     return parser
 
 
@@ -125,6 +178,21 @@ def main(argv: list[str] | None = None) -> int:
             arguments.events,
             arguments.signals,
             arguments.control_ledger,
+            arguments.output_root,
+            arguments.evidence,
+        )
+        print(json.dumps(result, indent=2, default=str))
+        return 0
+    if command == "phase09-acceptance-research":
+        result = run_phase09(
+            arguments.contract,
+            arguments.execution,
+            arguments.bias_freeze,
+            arguments.bias,
+            arguments.prices,
+            arguments.events,
+            arguments.signals,
+            arguments.immediate_control,
             arguments.output_root,
             arguments.evidence,
         )

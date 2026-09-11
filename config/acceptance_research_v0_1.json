@@ -1,0 +1,74 @@
+{
+  "schema_version": "0.1",
+  "experiment_id": "F2_T3_A1_ONE_BAR_ACCEPTANCE_E1",
+  "registered_at_utc": "2026-09-11T15:26:13Z",
+  "registered_before_new_acceptance_outcomes": true,
+  "development_start_utc": "2021-07-01T00:00:00Z",
+  "development_end_exclusive_utc": "2025-08-28T00:00:00Z",
+  "locked_start_utc": "2025-08-28T00:00:00Z",
+  "locked_end_exclusive_utc": "2026-09-11T00:00:00Z",
+  "locked_outcomes_allowed": false,
+  "parameter_grid_allowed": false,
+  "fundamental_permission": {
+    "variant": "F2",
+    "evaluated_at": "ACTUAL_DELAYED_ENTRY",
+    "flat_or_expired": "REJECT_ENTRY",
+    "opposite_direction": "REJECT_ENTRY"
+  },
+  "technical_candidate": {
+    "id": "T3_A1_ONE_BAR_ACCEPTANCE",
+    "origin": "T3_FIRST_LONDON_VWAP_RECLAIM",
+    "confirmation_bars": 1,
+    "confirmation": "LONG_CLOSE_ABOVE_VWAP_SHORT_CLOSE_BELOW_VWAP",
+    "confirmation_observation": "COMPLETED_M15_CLOSE",
+    "entry": "NEXT_AVAILABLE_M15_OPEN",
+    "entry_window": "08:00_TO_17:00_EUROPE_LONDON",
+    "atr": "ATR14_THROUGH_CONFIRMATION_BAR"
+  },
+  "exit": {
+    "id": "E1_VWAP_INVALIDATION",
+    "initial_stop_atr": 1.0,
+    "fixed_target_r": null,
+    "invalidation": "LONG_CLOSE_BELOW_VWAP_SHORT_CLOSE_ABOVE_VWAP",
+    "execution": "NEXT_AVAILABLE_M15_OPEN",
+    "stop_never_widens": true,
+    "bias_flip_exit": true,
+    "rollover_flat_utc": "20:45"
+  },
+  "controls": {
+    "immediate_entry_control": "F2_T3_E1_PHASE08",
+    "technical_only_acceptance": true,
+    "bias_placebos": [
+      "REVERSED",
+      "ONE_SNAPSHOT_LAG",
+      "FREQUENCY_MATCHED_SHUFFLE"
+    ],
+    "placebo_seed": 20260911
+  },
+  "promotion_gate": {
+    "minimum_development_trades": 400,
+    "requires_positive_expectancy": true,
+    "requires_improvement_over_immediate_entry_control": true,
+    "requires_improvement_over_technical_only_acceptance": true,
+    "requires_primary_to_beat_every_bias_placebo": true,
+    "maximum_drawdown_r": 25.0,
+    "minimum_positive_pairs": 3,
+    "minimum_positive_calendar_years": 3,
+    "maximum_single_pair_positive_profit_share": 0.5,
+    "bootstrap_block_months": 3,
+    "bootstrap_resamples": 2000,
+    "requires_positive_bootstrap_lower_bound": true,
+    "stress_slippage_points": [2, 5],
+    "two_point_slippage_must_remain_positive": true,
+    "five_point_slippage_floor_r": -0.05,
+    "additional_one_bar_entry_delay_must_remain_positive": true
+  },
+  "iteration_policy": {
+    "select_at_most_one_candidate": true,
+    "no_confirmation_bar_grid": true,
+    "no_indicator_confluence_grid": true,
+    "no_threshold_tuning_after_development": true,
+    "locked_run_only_if_every_gate_passes": true,
+    "no_tuning_after_locked_run": true
+  }
+}
