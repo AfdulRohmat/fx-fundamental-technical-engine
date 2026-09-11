@@ -69,3 +69,17 @@ Status: implementation passed; economics negative.
   area, but maximum Raw commission is material against a one-M15-ATR stop.
 - No rule or parameter was removed after observing the negative baselines. The
   complete six-cell hybrid matrix remains registered for Phase 05.
+
+## Phase 05 - hybrid development and validation
+
+Status: no candidate promoted; locked test remains unopened.
+
+- F2_T3 was the only adequately sampled positive cell: 202 validation trades,
+  40.59% wins, +0.0979R expectancy, +19.78R, four positive pairs, and +0.2783R
+  incremental expectancy over T3.
+- It failed the 12R drawdown gate at 18.75R. Development was -0.1882R/trade,
+  its bootstrap interval crossed zero, a lag placebo slightly outperformed it,
+  and five-point slippage made it negative.
+- F2_T1 was positive but had only 59 validation trades versus the minimum 100.
+- The remaining four cells were negative. No pair, year, cost, or threshold was
+  changed after observing these results.

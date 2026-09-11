@@ -1,7 +1,7 @@
 # Technical Plan
 
-Status: Phase 04 baselines are complete and negative after costs. Phase 05 may
-test the frozen six-cell hybrid matrix without changing technical rules.
+Status: Phase 05 completed with no promoted candidate. Phase 06 locked testing
+is prohibited; Phase 07 closes the research as inconclusive.
 
 ## Architecture
 
@@ -116,6 +116,9 @@ baselines are negative after cost; locked outcomes remain unopened.
 Exit: at most one promoted hybrid candidate. No promotion produces an
 inconclusive result without opening the locked slice.
 
+Result: no promotion. F2_T3 was positive and improved T3 in validation, but it
+failed the frozen drawdown gate and multiple robustness diagnostics.
+
 ## Phase 06 - locked backtest and execution validation
 
 - execute the frozen candidate exactly once on the locked chronological slice;
@@ -126,6 +129,8 @@ inconclusive result without opening the locked slice.
 - archive tester request, report, logs, hashes, and environment metadata.
 
 Exit: locked result bundle. No tuning follows a locked failure.
+
+Result: `NOT_RUN`; Phase 05 produced no eligible frozen candidate.
 
 ## Phase 07 - final research review
 

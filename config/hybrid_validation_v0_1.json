@@ -1,0 +1,20 @@
+{
+  "schema_version": "0.1",
+  "registered_before_hybrid_pnl": true,
+  "matrix": ["F1_T1", "F1_T2", "F1_T3", "F2_T1", "F2_T2", "F2_T3"],
+  "selection_metric": "validation_net_expectancy_r",
+  "minimum_validation_trades": 100,
+  "minimum_positive_validation_pairs": 3,
+  "maximum_validation_drawdown_r": 12.0,
+  "maximum_single_pair_positive_profit_share": 0.5,
+  "requires_positive_validation_expectancy": true,
+  "requires_improvement_over_matching_baseline": true,
+  "tie_break_order": ["lower_drawdown", "more_trades", "lexicographic_candidate_id"],
+  "placebos": ["REVERSED", "ONE_SNAPSHOT_LAG", "FREQUENCY_MATCHED_SHUFFLE"],
+  "placebo_seed": 20260911,
+  "bootstrap_block_months": 3,
+  "bootstrap_resamples": 2000,
+  "stress_slippage_points": [2, 5],
+  "locked_outcomes_allowed": false,
+  "maximum_promoted_candidates": 1
+}

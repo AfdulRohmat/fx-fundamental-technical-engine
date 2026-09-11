@@ -1,0 +1,1140 @@
+{
+  "bias_freeze_verified": true,
+  "diagnostic_candidate": "F2_T3",
+  "diagnostic_candidate_placebos": {
+    "FREQUENCY_MATCHED_SHUFFLE": {
+      "average_loss_r": -1.1191231417900522,
+      "average_win_r": 1.8133068505261272,
+      "commission_r": 28.205490902810062,
+      "estimated_spread_r": 0.5609261646929156,
+      "exit_reasons": {
+        "BIAS_FLIP": 6,
+        "STOP": 155,
+        "TARGET": 70
+      },
+      "expectancy_r": -0.17972998407837584,
+      "maximum_drawdown_r": 41.51762632210482,
+      "median_holding_hours": 0.75,
+      "net_r": -41.51762632210482,
+      "profit_factor": 0.763704752512178,
+      "trades": 231,
+      "win_rate": 0.3203463203463203
+    },
+    "ONE_SNAPSHOT_LAG": {
+      "average_loss_r": -1.1111126121891493,
+      "average_win_r": 1.872476164351525,
+      "commission_r": 21.859151738780167,
+      "estimated_spread_r": 1.3682910746808328,
+      "exit_reasons": {
+        "ROLLOVER_FLAT": 1,
+        "STOP": 114,
+        "TARGET": 79
+      },
+      "expectancy_r": 0.11923327504411842,
+      "maximum_drawdown_r": 13.24451543357753,
+      "median_holding_hours": 1.0,
+      "net_r": 23.131255358558974,
+      "profit_factor": 1.1826149271760296,
+      "trades": 194,
+      "win_rate": 0.41237113402061853
+    },
+    "REVERSED": {
+      "average_loss_r": -1.1125308232579256,
+      "average_win_r": 1.8899439244095937,
+      "commission_r": 20.54727898802788,
+      "estimated_spread_r": 0.4285714285714231,
+      "exit_reasons": {
+        "STOP": 122,
+        "TARGET": 63
+      },
+      "expectancy_r": -0.09006644972790563,
+      "maximum_drawdown_r": 34.10588168785439,
+      "median_holding_hours": 1.0,
+      "net_r": -16.662293199662543,
+      "profit_factor": 0.8772383012564299,
+      "trades": 185,
+      "win_rate": 0.34054054054054056
+    }
+  },
+  "diagnostic_candidate_slippage_stress": {
+    "2": {
+      "average_loss_r": -1.1403569924190962,
+      "average_win_r": 1.8434100179101587,
+      "commission_r": 23.200858074141507,
+      "estimated_spread_r": 1.3980150661882624,
+      "exit_reasons": {
+        "ROLLOVER_FLAT": 1,
+        "STOP": 121,
+        "TARGET": 80
+      },
+      "expectancy_r": 0.05610403647530795,
+      "maximum_drawdown_r": 19.627288281937886,
+      "median_holding_hours": 1.0,
+      "net_r": 11.333015368012205,
+      "profit_factor": 1.0821333009362888,
+      "trades": 202,
+      "win_rate": 0.400990099009901
+    },
+    "5": {
+      "average_loss_r": -1.184028368685633,
+      "average_win_r": 1.8073010734396293,
+      "commission_r": 23.20085887608043,
+      "estimated_spread_r": 1.3980150661882624,
+      "exit_reasons": {
+        "ROLLOVER_FLAT": 1,
+        "STOP": 125,
+        "TARGET": 76
+      },
+      "expectancy_r": -0.04376912589531041,
+      "maximum_drawdown_r": 25.497011226926872,
+      "median_holding_hours": 1.0,
+      "net_r": -8.841363430852702,
+      "profit_factor": 0.9402624892127048,
+      "trades": 202,
+      "win_rate": 0.3811881188118812
+    }
+  },
+  "engine_version": "frozen-bias-permission-v0.1",
+  "files": [
+    {
+      "candidate": "F1_T1",
+      "path": "data\\canonical\\phase05\\f1_t1_ledger.parquet",
+      "sha256": "c4f944062af71a2caf01ddcf668d1831330889e27193113f72a8aac8382be619"
+    },
+    {
+      "candidate": "F1_T2",
+      "path": "data\\canonical\\phase05\\f1_t2_ledger.parquet",
+      "sha256": "f3f2364c65b3a15346966aa3d4bf0c33b72352e0e63fa6576a1337963c823ab5"
+    },
+    {
+      "candidate": "F1_T3",
+      "path": "data\\canonical\\phase05\\f1_t3_ledger.parquet",
+      "sha256": "709b0de2dd7cef7a477721fef87486a27547a2205fe24d36f9b52a8bf202e607"
+    },
+    {
+      "candidate": "F2_T1",
+      "path": "data\\canonical\\phase05\\f2_t1_ledger.parquet",
+      "sha256": "4cdfa0fb91af790f14b775de1f87207340928139a97d14f5305ff229aec37451"
+    },
+    {
+      "candidate": "F2_T2",
+      "path": "data\\canonical\\phase05\\f2_t2_ledger.parquet",
+      "sha256": "a13acbd836614531ae733fd028de0a77b2ad8933e55d395d0835dea5dbb20d4e"
+    },
+    {
+      "candidate": "F2_T3",
+      "path": "data\\canonical\\phase05\\f2_t3_ledger.parquet",
+      "sha256": "3358f4825c9393a8fa43b3359358eb115be41fbc81561dc286d9704d00d0f831"
+    }
+  ],
+  "locked_outcomes_accessed": false,
+  "promoted_candidate": null,
+  "results": {
+    "F1_T1": {
+      "assessment": {
+        "baseline_expectancy_r": -0.1009486353111416,
+        "eligible_for_promotion": false,
+        "expectancy_block_bootstrap_95_ci_r": [
+          -0.286954698984113,
+          0.00026591614578868786
+        ],
+        "incremental_expectancy_r": -0.04985719380418782,
+        "metrics": {
+          "average_loss_r": -1.097729032968907,
+          "average_win_r": 1.7971504759548875,
+          "commission_r": 11.351077461752377,
+          "estimated_spread_r": 0.008348240906380134,
+          "exit_reasons": {
+            "ROLLOVER_FLAT": 4,
+            "STOP": 70,
+            "TARGET": 33
+          },
+          "expectancy_r": -0.15080582911532942,
+          "maximum_drawdown_r": 25.92659308402927,
+          "median_holding_hours": 1.0,
+          "net_r": -16.136223715340247,
+          "profit_factor": 0.7958383065969592,
+          "trades": 107,
+          "win_rate": 0.32710280373831774
+        },
+        "pair_metrics": {
+          "AUDUSD": {
+            "average_loss_r": -1.1317834906346074,
+            "average_win_r": 1.8796094525665439,
+            "commission_r": 2.3037451722160074,
+            "estimated_spread_r": 0.0,
+            "exit_reasons": {
+              "STOP": 12,
+              "TARGET": 6
+            },
+            "expectancy_r": -0.1279858429008901,
+            "maximum_drawdown_r": 4.8152380404044175,
+            "median_holding_hours": 1.25,
+            "net_r": -2.303745172216022,
+            "profit_factor": 0.8303750090543466,
+            "trades": 18,
+            "win_rate": 0.3333333333333333
+          },
+          "EURUSD": {
+            "average_loss_r": -1.0682754027029049,
+            "average_win_r": 1.664405968265757,
+            "commission_r": 1.2169011593304295,
+            "estimated_spread_r": 0.0,
+            "exit_reasons": {
+              "ROLLOVER_FLAT": 1,
+              "STOP": 12,
+              "TARGET": 4
+            },
+            "expectancy_r": -0.2645455877121218,
+            "maximum_drawdown_r": 9.822015731767904,
+            "median_holding_hours": 1.25,
+            "net_r": -4.49727499110607,
+            "profit_factor": 0.6491794953087269,
+            "trades": 17,
+            "win_rate": 0.29411764705882354
+          },
+          "GBPUSD": {
+            "average_loss_r": -1.0629174420582024,
+            "average_win_r": 1.9311754364981233,
+            "commission_r": 1.8605996425521956,
+            "estimated_spread_r": 0.0,
+            "exit_reasons": {
+              "ROLLOVER_FLAT": 1,
+              "STOP": 17,
+              "TARGET": 8
+            },
+            "expectancy_r": -0.14165809481010225,
+            "maximum_drawdown_r": 9.884858948979609,
+            "median_holding_hours": 0.875,
+            "net_r": -3.6831104650626583,
+            "profit_factor": 0.8074946934139856,
+            "trades": 26,
+            "win_rate": 0.3076923076923077
+          },
+          "USDCAD": {
+            "average_loss_r": -1.166424399306944,
+            "average_win_r": 1.6944408725815376,
+            "commission_r": 4.922047102656895,
+            "estimated_spread_r": 0.008348240906380134,
+            "exit_reasons": {
+              "ROLLOVER_FLAT": 2,
+              "STOP": 15,
+              "TARGET": 12
+            },
+            "expectancy_r": 0.1160324467120304,
+            "maximum_drawdown_r": 6.751885453432657,
+            "median_holding_hours": 1.0,
+            "net_r": 3.3649409546488815,
+            "profit_factor": 1.1803021351323881,
+            "trades": 29,
+            "win_rate": 0.4482758620689655
+          },
+          "USDJPY": {
+            "average_loss_r": -1.060034236268029,
+            "average_win_r": 1.9411484220493422,
+            "commission_r": 1.047784384996851,
+            "estimated_spread_r": 0.0,
+            "exit_reasons": {
+              "STOP": 14,
+              "TARGET": 3
+            },
+            "expectancy_r": -0.5304137671531988,
+            "maximum_drawdown_r": 10.574181587713932,
+            "median_holding_hours": 0.75,
+            "net_r": -9.01703404160438,
+            "profit_factor": 0.39240277523287004,
+            "trades": 17,
+            "win_rate": 0.17647058823529413
+          }
+        },
+        "positive_pair_count": 1,
+        "positive_pair_profit_share_max": 1.0,
+        "promotion_checks": {
+          "concentration": false,
+          "drawdown": false,
+          "improves_baseline": false,
+          "minimum_trades": true,
+          "positive_expectancy": false,
+          "positive_pairs": false
+        }
+      },
+      "bias_aligned_signals": 584,
+      "bias_rejections": 1396,
+      "development": {
+        "average_loss_r": -1.0785865809944841,
+        "average_win_r": 1.816750554541422,
+        "commission_r": 37.21996347652488,
+        "estimated_spread_r": 2.351390555114672,
+        "exit_reasons": {
+          "ROLLOVER_FLAT": 13,
+          "STOP": 266,
+          "TARGET": 110
+        },
+        "expectancy_r": -0.20030950646174142,
+        "maximum_drawdown_r": 86.46117601232405,
+        "median_holding_hours": 0.75,
+        "net_r": -77.92039801361742,
+        "profit_factor": 0.7334204327884566,
+        "trades": 389,
+        "win_rate": 0.3033419023136247
+      },
+      "execution_rejections": 88,
+      "technical_signals": 1980,
+      "validation": {
+        "average_loss_r": -1.097729032968907,
+        "average_win_r": 1.7971504759548875,
+        "commission_r": 11.351077461752377,
+        "estimated_spread_r": 0.008348240906380134,
+        "exit_reasons": {
+          "ROLLOVER_FLAT": 4,
+          "STOP": 70,
+          "TARGET": 33
+        },
+        "expectancy_r": -0.15080582911532942,
+        "maximum_drawdown_r": 25.92659308402927,
+        "median_holding_hours": 1.0,
+        "net_r": -16.136223715340247,
+        "profit_factor": 0.7958383065969592,
+        "trades": 107,
+        "win_rate": 0.32710280373831774
+      }
+    },
+    "F1_T2": {
+      "assessment": {
+        "baseline_expectancy_r": -0.10023945101171962,
+        "eligible_for_promotion": false,
+        "expectancy_block_bootstrap_95_ci_r": [
+          -0.38707671586219655,
+          -0.16407194410920484
+        ],
+        "incremental_expectancy_r": -0.13143775303636546,
+        "metrics": {
+          "average_loss_r": -1.1072882919302176,
+          "average_win_r": 1.887301628626676,
+          "commission_r": 37.32874560656791,
+          "estimated_spread_r": 1.2552058385518776,
+          "exit_reasons": {
+            "STOP": 242,
+            "TARGET": 100
+          },
+          "expectancy_r": -0.23167720404808506,
+          "maximum_drawdown_r": 83.50790744351961,
+          "median_holding_hours": 1.0,
+          "net_r": -79.2336037844451,
+          "profit_factor": 0.7043122479734749,
+          "trades": 342,
+          "win_rate": 0.29239766081871343
+        },
+        "pair_metrics": {
+          "AUDUSD": {
+            "average_loss_r": -1.123197991068742,
+            "average_win_r": 1.8762953815696266,
+            "commission_r": 8.26541120356073,
+            "estimated_spread_r": 0.6334841628959147,
+            "exit_reasons": {
+              "STOP": 45,
+              "TARGET": 22
+            },
+            "expectancy_r": -0.1382897194561433,
+            "maximum_drawdown_r": 19.649776382136693,
+            "median_holding_hours": 1.25,
+            "net_r": -9.265411203561602,
+            "profit_factor": 0.8166859018774616,
+            "trades": 67,
+            "win_rate": 0.3283582089552239
+          },
+          "EURUSD": {
+            "average_loss_r": -1.0940636101588679,
+            "average_win_r": 1.9083137424367678,
+            "commission_r": 6.713146116548314,
+            "estimated_spread_r": 0.0,
+            "exit_reasons": {
+              "STOP": 47,
+              "TARGET": 25
+            },
+            "expectancy_r": -0.05157147384093871,
+            "maximum_drawdown_r": 17.901843598739745,
+            "median_holding_hours": 0.75,
+            "net_r": -3.7131461165475868,
+            "profit_factor": 0.9277892911078153,
+            "trades": 72,
+            "win_rate": 0.3472222222222222
+          },
+          "GBPUSD": {
+            "average_loss_r": -1.0757667622949838,
+            "average_win_r": 1.9254873126731824,
+            "commission_r": 6.110772171562226,
+            "estimated_spread_r": 0.621721675655963,
+            "exit_reasons": {
+              "STOP": 60,
+              "TARGET": 21
+            },
+            "expectancy_r": -0.2976638539699037,
+            "maximum_drawdown_r": 25.518334889891175,
+            "median_holding_hours": 0.75,
+            "net_r": -24.1107721715622,
+            "profit_factor": 0.6264560154265292,
+            "trades": 81,
+            "win_rate": 0.25925925925925924
+          },
+          "USDCAD": {
+            "average_loss_r": -1.1716586743502555,
+            "average_win_r": 1.8128794224789306,
+            "commission_r": 12.16507532592935,
+            "estimated_spread_r": 0.0,
+            "exit_reasons": {
+              "STOP": 49,
+              "TARGET": 20
+            },
+            "expectancy_r": -0.306575168022955,
+            "maximum_drawdown_r": 21.153686593583895,
+            "median_holding_hours": 1.0,
+            "net_r": -21.153686593583895,
+            "profit_factor": 0.6315412507790448,
+            "trades": 69,
+            "win_rate": 0.2898550724637681
+          },
+          "USDJPY": {
+            "average_loss_r": -1.0741850387973404,
+            "average_win_r": 1.920916574291762,
+            "commission_r": 4.074340788967294,
+            "estimated_spread_r": 0.0,
+            "exit_reasons": {
+              "STOP": 41,
+              "TARGET": 12
+            },
+            "expectancy_r": -0.3960488245130151,
+            "maximum_drawdown_r": 22.698730557258322,
+            "median_holding_hours": 1.25,
+            "net_r": -20.9905876991898,
+            "profit_factor": 0.5233916549312831,
+            "trades": 53,
+            "win_rate": 0.22641509433962265
+          }
+        },
+        "positive_pair_count": 0,
+        "positive_pair_profit_share_max": null,
+        "promotion_checks": {
+          "concentration": false,
+          "drawdown": false,
+          "improves_baseline": false,
+          "minimum_trades": true,
+          "positive_expectancy": false,
+          "positive_pairs": false
+        }
+      },
+      "bias_aligned_signals": 1550,
+      "bias_rejections": 3823,
+      "development": {
+        "average_loss_r": -1.107749369098083,
+        "average_win_r": 1.894094553977712,
+        "commission_r": 103.81172668520594,
+        "estimated_spread_r": 14.606521805840403,
+        "exit_reasons": {
+          "ROLLOVER_FLAT": 3,
+          "STOP": 687,
+          "TARGET": 304
+        },
+        "expectancy_r": -0.18666043897925264,
+        "maximum_drawdown_r": 185.54047634537721,
+        "median_holding_hours": 1.0,
+        "net_r": -185.54047634537713,
+        "profit_factor": 0.7569039321954181,
+        "trades": 994,
+        "win_rate": 0.306841046277666
+      },
+      "execution_rejections": 214,
+      "technical_signals": 5373,
+      "validation": {
+        "average_loss_r": -1.1072882919302176,
+        "average_win_r": 1.887301628626676,
+        "commission_r": 37.32874560656791,
+        "estimated_spread_r": 1.2552058385518776,
+        "exit_reasons": {
+          "STOP": 242,
+          "TARGET": 100
+        },
+        "expectancy_r": -0.23167720404808506,
+        "maximum_drawdown_r": 83.50790744351961,
+        "median_holding_hours": 1.0,
+        "net_r": -79.2336037844451,
+        "profit_factor": 0.7043122479734749,
+        "trades": 342,
+        "win_rate": 0.29239766081871343
+      }
+    },
+    "F1_T3": {
+      "assessment": {
+        "baseline_expectancy_r": -0.1803696502120794,
+        "eligible_for_promotion": false,
+        "expectancy_block_bootstrap_95_ci_r": [
+          -0.19260588884566548,
+          0.08927987086291948
+        ],
+        "incremental_expectancy_r": 0.1751569467014099,
+        "metrics": {
+          "average_loss_r": -1.1226403818979431,
+          "average_win_r": 1.8772231546955835,
+          "commission_r": 41.8334271800137,
+          "estimated_spread_r": 1.5988716495980446,
+          "exit_reasons": {
+            "ROLLOVER_FLAT": 1,
+            "STOP": 219,
+            "TARGET": 129
+          },
+          "expectancy_r": -0.0052127035106694945,
+          "maximum_drawdown_r": 37.39042974842758,
+          "median_holding_hours": 1.0,
+          "net_r": -1.8192335252236536,
+          "profit_factor": 0.9926004778268908,
+          "trades": 349,
+          "win_rate": 0.37249283667621774
+        },
+        "pair_metrics": {
+          "AUDUSD": {
+            "average_loss_r": -1.131959102699098,
+            "average_win_r": 1.8734251020385961,
+            "commission_r": 6.363696142239346,
+            "estimated_spread_r": 0.0,
+            "exit_reasons": {
+              "STOP": 30,
+              "TARGET": 19
+            },
+            "expectancy_r": 0.03339395628082415,
+            "maximum_drawdown_r": 5.766178466321826,
+            "median_holding_hours": 1.25,
+            "net_r": 1.6363038577603835,
+            "profit_factor": 1.0481850110973887,
+            "trades": 49,
+            "win_rate": 0.3877551020408163
+          },
+          "EURUSD": {
+            "average_loss_r": -1.1039460459716146,
+            "average_win_r": 1.904012737523928,
+            "commission_r": 7.133446975623676,
+            "estimated_spread_r": 0.7050359712230203,
+            "exit_reasons": {
+              "STOP": 40,
+              "TARGET": 31
+            },
+            "expectancy_r": 0.20938807076587582,
+            "maximum_drawdown_r": 7.41690716089058,
+            "median_holding_hours": 0.75,
+            "net_r": 14.866553024377183,
+            "profit_factor": 1.3366684694108557,
+            "trades": 71,
+            "win_rate": 0.43661971830985913
+          },
+          "GBPUSD": {
+            "average_loss_r": -1.0898851681689063,
+            "average_win_r": 1.9186798176907935,
+            "commission_r": 7.456044915016371,
+            "estimated_spread_r": 0.7298286571977408,
+            "exit_reasons": {
+              "STOP": 54,
+              "TARGET": 32
+            },
+            "expectancy_r": 0.029580873081214577,
+            "maximum_drawdown_r": 12.482182014251448,
+            "median_holding_hours": 1.0,
+            "net_r": 2.5439550849844537,
+            "profit_factor": 1.043224993538276,
+            "trades": 86,
+            "win_rate": 0.37209302325581395
+          },
+          "USDCAD": {
+            "average_loss_r": -1.199010399329258,
+            "average_win_r": 1.7997525551307474,
+            "commission_r": 15.95397018361759,
+            "estimated_spread_r": 0.16400702117728352,
+            "exit_reasons": {
+              "STOP": 54,
+              "TARGET": 26
+            },
+            "expectancy_r": -0.22441243912975617,
+            "maximum_drawdown_r": 22.997913413044756,
+            "median_holding_hours": 0.75,
+            "net_r": -17.952995130380494,
+            "profit_factor": 0.7227189414113437,
+            "trades": 80,
+            "win_rate": 0.325
+          },
+          "USDJPY": {
+            "average_loss_r": -1.0766162944124675,
+            "average_win_r": 1.8740098958611808,
+            "commission_r": 4.9262689635167165,
+            "estimated_spread_r": 0.0,
+            "exit_reasons": {
+              "ROLLOVER_FLAT": 1,
+              "STOP": 41,
+              "TARGET": 21
+            },
+            "expectancy_r": -0.046238894634367936,
+            "maximum_drawdown_r": 11.689926279649654,
+            "median_holding_hours": 1.0,
+            "net_r": -2.9130503619651797,
+            "profit_factor": 0.9340061921808523,
+            "trades": 63,
+            "win_rate": 0.3492063492063492
+          }
+        },
+        "positive_pair_count": 3,
+        "positive_pair_profit_share_max": 0.7805271060605491,
+        "promotion_checks": {
+          "concentration": false,
+          "drawdown": false,
+          "improves_baseline": true,
+          "minimum_trades": true,
+          "positive_expectancy": false,
+          "positive_pairs": true
+        }
+      },
+      "bias_aligned_signals": 1516,
+      "bias_rejections": 3781,
+      "development": {
+        "average_loss_r": -1.1137007445544629,
+        "average_win_r": 1.8770606343130498,
+        "commission_r": 115.54890324245262,
+        "estimated_spread_r": 16.14591549192231,
+        "exit_reasons": {
+          "BIAS_FLIP": 1,
+          "ROLLOVER_FLAT": 3,
+          "STOP": 688,
+          "TARGET": 317
+        },
+        "expectancy_r": -0.17112183624934005,
+        "maximum_drawdown_r": 174.53056548335934,
+        "median_holding_hours": 0.75,
+        "net_r": -172.66193277558412,
+        "profit_factor": 0.7756376187482832,
+        "trades": 1009,
+        "win_rate": 0.3151635282457879
+      },
+      "execution_rejections": 158,
+      "technical_signals": 5297,
+      "validation": {
+        "average_loss_r": -1.1226403818979431,
+        "average_win_r": 1.8772231546955835,
+        "commission_r": 41.8334271800137,
+        "estimated_spread_r": 1.5988716495980446,
+        "exit_reasons": {
+          "ROLLOVER_FLAT": 1,
+          "STOP": 219,
+          "TARGET": 129
+        },
+        "expectancy_r": -0.0052127035106694945,
+        "maximum_drawdown_r": 37.39042974842758,
+        "median_holding_hours": 1.0,
+        "net_r": -1.8192335252236536,
+        "profit_factor": 0.9926004778268908,
+        "trades": 349,
+        "win_rate": 0.37249283667621774
+      }
+    },
+    "F2_T1": {
+      "assessment": {
+        "baseline_expectancy_r": -0.1009486353111416,
+        "eligible_for_promotion": false,
+        "expectancy_block_bootstrap_95_ci_r": [
+          -0.4365049682129491,
+          0.6971650880208106
+        ],
+        "incremental_expectancy_r": 0.1596570204180469,
+        "metrics": {
+          "average_loss_r": -1.1005229162823906,
+          "average_win_r": 1.7492540329662951,
+          "commission_r": 6.739402568543666,
+          "estimated_spread_r": 0.008348240906380134,
+          "exit_reasons": {
+            "ROLLOVER_FLAT": 4,
+            "STOP": 33,
+            "TARGET": 22
+          },
+          "expectancy_r": 0.058708385106905306,
+          "maximum_drawdown_r": 5.594864911086975,
+          "median_holding_hours": 1.0,
+          "net_r": 3.463794721307413,
+          "profit_factor": 1.0899259452045174,
+          "trades": 59,
+          "win_rate": 0.4067796610169492
+        },
+        "pair_metrics": {
+          "AUDUSD": {
+            "average_loss_r": -1.1127319493230732,
+            "average_win_r": 1.8816791227212892,
+            "commission_r": 0.8003015011728731,
+            "estimated_spread_r": 0.0,
+            "exit_reasons": {
+              "STOP": 5,
+              "TARGET": 2
+            },
+            "expectancy_r": -0.25718592873896967,
+            "maximum_drawdown_r": 4.452674469152225,
+            "median_holding_hours": 1.25,
+            "net_r": -1.8003015011727879,
+            "profit_factor": 0.67641775680693,
+            "trades": 7,
+            "win_rate": 0.2857142857142857
+          },
+          "EURUSD": {
+            "average_loss_r": -1.055772452233275,
+            "average_win_r": 1.6113250703950455,
+            "commission_r": 0.5531881478103496,
+            "estimated_spread_r": 0.0,
+            "exit_reasons": {
+              "ROLLOVER_FLAT": 1,
+              "STOP": 5,
+              "TARGET": 3
+            },
+            "expectancy_r": 0.12960422449042294,
+            "maximum_drawdown_r": 3.3401505663571456,
+            "median_holding_hours": 1.5,
+            "net_r": 1.1664380204138065,
+            "profit_factor": 1.2209639052328825,
+            "trades": 9,
+            "win_rate": 0.4444444444444444
+          },
+          "GBPUSD": {
+            "average_loss_r": -1.0422930102295882,
+            "average_win_r": 1.928128607793669,
+            "commission_r": 0.6764397974626168,
+            "estimated_spread_r": 0.0,
+            "exit_reasons": {
+              "ROLLOVER_FLAT": 1,
+              "STOP": 4,
+              "TARGET": 4
+            },
+            "expectancy_r": 0.27789437555852614,
+            "maximum_drawdown_r": 2.1649479138662526,
+            "median_holding_hours": 0.5,
+            "net_r": 2.501049380026735,
+            "profit_factor": 1.4799129142151346,
+            "trades": 9,
+            "win_rate": 0.4444444444444444
+          },
+          "USDCAD": {
+            "average_loss_r": -1.166747780469352,
+            "average_win_r": 1.6823085408329421,
+            "commission_r": 4.100824017090944,
+            "estimated_spread_r": 0.008348240906380134,
+            "exit_reasons": {
+              "ROLLOVER_FLAT": 2,
+              "STOP": 11,
+              "TARGET": 11
+            },
+            "expectancy_r": 0.25778038018179517,
+            "maximum_drawdown_r": 3.321077070575842,
+            "median_holding_hours": 1.0,
+            "net_r": 6.186729124363084,
+            "profit_factor": 1.4418785010726085,
+            "trades": 24,
+            "win_rate": 0.5
+          },
+          "USDJPY": {
+            "average_loss_r": -1.057917705665221,
+            "average_win_r": 1.9366106714991704,
+            "commission_r": 0.6086491050068823,
+            "estimated_spread_r": 0.0,
+            "exit_reasons": {
+              "STOP": 8,
+              "TARGET": 2
+            },
+            "expectancy_r": -0.45901203023234266,
+            "maximum_drawdown_r": 6.339570291856412,
+            "median_holding_hours": 0.5,
+            "net_r": -4.5901203023234265,
+            "profit_factor": 0.4576468143808562,
+            "trades": 10,
+            "win_rate": 0.2
+          }
+        },
+        "positive_pair_count": 3,
+        "positive_pair_profit_share_max": 0.627825571803779,
+        "promotion_checks": {
+          "concentration": false,
+          "drawdown": true,
+          "improves_baseline": true,
+          "minimum_trades": false,
+          "positive_expectancy": true,
+          "positive_pairs": true
+        }
+      },
+      "bias_aligned_signals": 344,
+      "bias_rejections": 1636,
+      "development": {
+        "average_loss_r": -1.0814286721357091,
+        "average_win_r": 1.7979485204535837,
+        "commission_r": 23.107553419299236,
+        "estimated_spread_r": 1.6820993764281011,
+        "exit_reasons": {
+          "BIAS_FLIP": 1,
+          "ROLLOVER_FLAT": 8,
+          "STOP": 154,
+          "TARGET": 71
+        },
+        "expectancy_r": -0.1339413053435062,
+        "maximum_drawdown_r": 48.28080560938738,
+        "median_holding_hours": 1.0,
+        "net_r": -31.342265450380452,
+        "profit_factor": 0.8153995088544223,
+        "trades": 234,
+        "win_rate": 0.32905982905982906
+      },
+      "execution_rejections": 51,
+      "technical_signals": 1980,
+      "validation": {
+        "average_loss_r": -1.1005229162823906,
+        "average_win_r": 1.7492540329662951,
+        "commission_r": 6.739402568543666,
+        "estimated_spread_r": 0.008348240906380134,
+        "exit_reasons": {
+          "ROLLOVER_FLAT": 4,
+          "STOP": 33,
+          "TARGET": 22
+        },
+        "expectancy_r": 0.058708385106905306,
+        "maximum_drawdown_r": 5.594864911086975,
+        "median_holding_hours": 1.0,
+        "net_r": 3.463794721307413,
+        "profit_factor": 1.0899259452045174,
+        "trades": 59,
+        "win_rate": 0.4067796610169492
+      }
+    },
+    "F2_T2": {
+      "assessment": {
+        "baseline_expectancy_r": -0.10023945101171962,
+        "eligible_for_promotion": false,
+        "expectancy_block_bootstrap_95_ci_r": [
+          -0.37385758843543293,
+          -0.06314852194604134
+        ],
+        "incremental_expectancy_r": -0.007203014124402912,
+        "metrics": {
+          "average_loss_r": -1.1045017712865541,
+          "average_win_r": 1.8866761471647404,
+          "commission_r": 20.061253029757232,
+          "estimated_spread_r": 1.2196910594476136,
+          "exit_reasons": {
+            "STOP": 124,
+            "TARGET": 62
+          },
+          "expectancy_r": -0.10744246513612253,
+          "maximum_drawdown_r": 30.858746167500758,
+          "median_holding_hours": 1.0,
+          "net_r": -19.98429851531879,
+          "profit_factor": 0.8540847086949839,
+          "trades": 186,
+          "win_rate": 0.3333333333333333
+        },
+        "pair_metrics": {
+          "AUDUSD": {
+            "average_loss_r": -1.1038226701472444,
+            "average_win_r": 1.8810469906161609,
+            "commission_r": 3.488759176314059,
+            "estimated_spread_r": 0.6334841628959147,
+            "exit_reasons": {
+              "STOP": 21,
+              "TARGET": 11
+            },
+            "expectancy_r": -0.07777372425982396,
+            "maximum_drawdown_r": 10.76734066844509,
+            "median_holding_hours": 1.375,
+            "net_r": -2.4887591763143666,
+            "profit_factor": 0.892634618825643,
+            "trades": 32,
+            "win_rate": 0.34375
+          },
+          "EURUSD": {
+            "average_loss_r": -1.0756383131966827,
+            "average_win_r": 1.9160344282175306,
+            "commission_r": 2.5203531253234104,
+            "estimated_spread_r": 0.0,
+            "exit_reasons": {
+              "STOP": 20,
+              "TARGET": 12
+            },
+            "expectancy_r": 0.04623896483364731,
+            "maximum_drawdown_r": 10.936122517240488,
+            "median_holding_hours": 1.0,
+            "net_r": 1.479646874676714,
+            "profit_factor": 1.0687799447325077,
+            "trades": 32,
+            "win_rate": 0.375
+          },
+          "GBPUSD": {
+            "average_loss_r": -1.0726496621334753,
+            "average_win_r": 1.9282807535456763,
+            "commission_r": 2.314554615800148,
+            "estimated_spread_r": 0.5862068965516989,
+            "exit_reasons": {
+              "STOP": 21,
+              "TARGET": 11
+            },
+            "expectancy_r": -0.041079831743767115,
+            "maximum_drawdown_r": 7.950440187790007,
+            "median_holding_hours": 0.75,
+            "net_r": -1.3145546158005477,
+            "profit_factor": 0.9416418602853618,
+            "trades": 32,
+            "win_rate": 0.34375
+          },
+          "USDCAD": {
+            "average_loss_r": -1.1741549827676274,
+            "average_win_r": 1.8190422514779547,
+            "commission_r": 8.655388970815494,
+            "estimated_spread_r": 0.0,
+            "exit_reasons": {
+              "STOP": 32,
+              "TARGET": 17
+            },
+            "expectancy_r": -0.13569879945793575,
+            "maximum_drawdown_r": 7.839584516563727,
+            "median_holding_hours": 1.0,
+            "net_r": -6.649241173438852,
+            "profit_factor": 0.8230312099172971,
+            "trades": 49,
+            "win_rate": 0.3469387755102041
+          },
+          "USDJPY": {
+            "average_loss_r": -1.072219164971327,
+            "average_win_r": 1.9231985931543711,
+            "commission_r": 3.082197141504121,
+            "estimated_spread_r": 0.0,
+            "exit_reasons": {
+              "STOP": 30,
+              "TARGET": 11
+            },
+            "expectancy_r": -0.2685704981571155,
+            "maximum_drawdown_r": 15.11997291982533,
+            "median_holding_hours": 1.0,
+            "net_r": -11.011390424441736,
+            "profit_factor": 0.6576760055476097,
+            "trades": 41,
+            "win_rate": 0.2682926829268293
+          }
+        },
+        "positive_pair_count": 1,
+        "positive_pair_profit_share_max": 1.0,
+        "promotion_checks": {
+          "concentration": false,
+          "drawdown": false,
+          "improves_baseline": false,
+          "minimum_trades": true,
+          "positive_expectancy": false,
+          "positive_pairs": false
+        }
+      },
+      "bias_aligned_signals": 915,
+      "bias_rejections": 4458,
+      "development": {
+        "average_loss_r": -1.1118460536453971,
+        "average_win_r": 1.892131775256036,
+        "commission_r": 67.97129335658336,
+        "estimated_spread_r": 11.801331642320525,
+        "exit_reasons": {
+          "ROLLOVER_FLAT": 2,
+          "STOP": 428,
+          "TARGET": 213
+        },
+        "expectancy_r": -0.11207738275129665,
+        "maximum_drawdown_r": 82.04877016350989,
+        "median_holding_hours": 1.0,
+        "net_r": -72.06575710908375,
+        "profit_factor": 0.8489130331884078,
+        "trades": 643,
+        "win_rate": 0.3328149300155521
+      },
+      "execution_rejections": 86,
+      "technical_signals": 5373,
+      "validation": {
+        "average_loss_r": -1.1045017712865541,
+        "average_win_r": 1.8866761471647404,
+        "commission_r": 20.061253029757232,
+        "estimated_spread_r": 1.2196910594476136,
+        "exit_reasons": {
+          "STOP": 124,
+          "TARGET": 62
+        },
+        "expectancy_r": -0.10744246513612253,
+        "maximum_drawdown_r": 30.858746167500758,
+        "median_holding_hours": 1.0,
+        "net_r": -19.98429851531879,
+        "profit_factor": 0.8540847086949839,
+        "trades": 186,
+        "win_rate": 0.3333333333333333
+      }
+    },
+    "F2_T3": {
+      "assessment": {
+        "baseline_expectancy_r": -0.1803696502120794,
+        "eligible_for_promotion": false,
+        "expectancy_block_bootstrap_95_ci_r": [
+          -0.17156531220626411,
+          0.2750199145901573
+        ],
+        "incremental_expectancy_r": 0.27830317527021237,
+        "metrics": {
+          "average_loss_r": -1.113371081318806,
+          "average_win_r": 1.8705744124390196,
+          "commission_r": 23.200857539515564,
+          "estimated_spread_r": 1.3980150661882624,
+          "exit_reasons": {
+            "ROLLOVER_FLAT": 1,
+            "STOP": 120,
+            "TARGET": 81
+          },
+          "expectancy_r": 0.09793352505813298,
+          "maximum_drawdown_r": 18.750448728403672,
+          "median_holding_hours": 1.0,
+          "net_r": 19.78257206174286,
+          "profit_factor": 1.1480681238692831,
+          "trades": 202,
+          "win_rate": 0.40594059405940597
+        },
+        "pair_metrics": {
+          "AUDUSD": {
+            "average_loss_r": -1.1037687237989118,
+            "average_win_r": 1.8955485978314885,
+            "commission_r": 2.392824752701099,
+            "estimated_spread_r": 0.0,
+            "exit_reasons": {
+              "STOP": 14,
+              "TARGET": 9
+            },
+            "expectancy_r": 0.06987718466515772,
+            "maximum_drawdown_r": 3.2207746704242863,
+            "median_holding_hours": 1.5,
+            "net_r": 1.6071752472986276,
+            "profit_factor": 1.1040056938330285,
+            "trades": 23,
+            "win_rate": 0.391304347826087
+          },
+          "EURUSD": {
+            "average_loss_r": -1.099271276474458,
+            "average_win_r": 1.9193502661246629,
+            "commission_r": 3.0152505272691394,
+            "estimated_spread_r": 0.7050359712230203,
+            "exit_reasons": {
+              "STOP": 19,
+              "TARGET": 14
+            },
+            "expectancy_r": 0.18135604462819938,
+            "maximum_drawdown_r": 6.520532396913801,
+            "median_holding_hours": 1.0,
+            "net_r": 5.984749472730579,
+            "profit_factor": 1.286541476244567,
+            "trades": 33,
+            "win_rate": 0.42424242424242425
+          },
+          "GBPUSD": {
+            "average_loss_r": -1.0795949734534778,
+            "average_win_r": 1.9215935063767633,
+            "commission_r": 3.480786195009423,
+            "estimated_spread_r": 0.6263157894736434,
+            "exit_reasons": {
+              "STOP": 26,
+              "TARGET": 18
+            },
+            "expectancy_r": 0.14816395011343883,
+            "maximum_drawdown_r": 11.482990764929212,
+            "median_holding_hours": 0.75,
+            "net_r": 6.519213804991309,
+            "profit_factor": 1.232252834317657,
+            "trades": 44,
+            "win_rate": 0.4090909090909091
+          },
+          "USDCAD": {
+            "average_loss_r": -1.1957289024930509,
+            "average_win_r": 1.8028305680020937,
+            "commission_r": 10.799778081996207,
+            "estimated_spread_r": 0.0666633054915989,
+            "exit_reasons": {
+              "STOP": 30,
+              "TARGET": 25
+            },
+            "expectancy_r": 0.1672526750047422,
+            "maximum_drawdown_r": 5.667127295548748,
+            "median_holding_hours": 1.0,
+            "net_r": 9.198897125260821,
+            "profit_factor": 1.2564376453024164,
+            "trades": 55,
+            "win_rate": 0.45454545454545453
+          },
+          "USDJPY": {
+            "average_loss_r": -1.0749766770153328,
+            "average_win_r": 1.8623008374335521,
+            "commission_r": 3.5122179825396946,
+            "estimated_spread_r": 0.0,
+            "exit_reasons": {
+              "ROLLOVER_FLAT": 1,
+              "STOP": 31,
+              "TARGET": 15
+            },
+            "expectancy_r": -0.0750524167774144,
+            "maximum_drawdown_r": 11.492328864006407,
+            "median_holding_hours": 1.5,
+            "net_r": -3.5274635885384766,
+            "profit_factor": 0.8941473331930276,
+            "trades": 47,
+            "win_rate": 0.3404255319148936
+          }
+        },
+        "positive_pair_count": 4,
+        "positive_pair_profit_share_max": 0.394632477756412,
+        "promotion_checks": {
+          "concentration": true,
+          "drawdown": false,
+          "improves_baseline": true,
+          "minimum_trades": true,
+          "positive_expectancy": true,
+          "positive_pairs": true
+        }
+      },
+      "bias_aligned_signals": 890,
+      "bias_rejections": 4407,
+      "development": {
+        "average_loss_r": -1.1164289075490519,
+        "average_win_r": 1.8697221505724055,
+        "commission_r": 73.85456794386724,
+        "estimated_spread_r": 11.463127917276207,
+        "exit_reasons": {
+          "ROLLOVER_FLAT": 3,
+          "STOP": 437,
+          "TARGET": 197
+        },
+        "expectancy_r": -0.18823752684567882,
+        "maximum_drawdown_r": 123.23427488633381,
+        "median_holding_hours": 0.75,
+        "net_r": -119.90730460069742,
+        "profit_factor": 0.7553472807233563,
+        "trades": 637,
+        "win_rate": 0.3108320251177394
+      },
+      "execution_rejections": 51,
+      "technical_signals": 5297,
+      "validation": {
+        "average_loss_r": -1.113371081318806,
+        "average_win_r": 1.8705744124390196,
+        "commission_r": 23.200857539515564,
+        "estimated_spread_r": 1.3980150661882624,
+        "exit_reasons": {
+          "ROLLOVER_FLAT": 1,
+          "STOP": 120,
+          "TARGET": 81
+        },
+        "expectancy_r": 0.09793352505813298,
+        "maximum_drawdown_r": 18.750448728403672,
+        "median_holding_hours": 1.0,
+        "net_r": 19.78257206174286,
+        "profit_factor": 1.1480681238692831,
+        "trades": 202,
+        "win_rate": 0.40594059405940597
+      }
+    }
+  },
+  "schema_version": "1.0",
+  "status": "NO_CANDIDATE_PROMOTED",
+  "summary_sha256": "ba21dd8c046f0764ec2352d75053f16514e35d2497469713662711bf15fa43d7",
+  "validation_config_sha256": "d3767351328e50fd40f4863df649fd7f476967f38a4a99460254091d9e1c12f6"
+}

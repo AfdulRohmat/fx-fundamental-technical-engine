@@ -260,7 +260,13 @@ def _simulate_position(
     entry_date = cast(pd.Timestamp, signal["entry_time"]).date()
     rollover = pd.Timestamp(f"{entry_date.isoformat()}T20:45:00Z")
     maximum = cast(pd.Timestamp, signal["entry_time"]) + pd.Timedelta(hours=24)
-    deadline = min(rollover, maximum)
+    bias_exit = signal.get("bias_exit_time")
+    bias_deadline = (
+        cast(pd.Timestamp, bias_exit)
+        if bias_exit is not None and pd.notna(bias_exit)
+        else maximum
+    )
+    deadline = min(rollover, maximum, bias_deadline)
     exit_price: float | None = None
     exit_time: pd.Timestamp | None = None
     exit_reason = "NO_EXIT"
@@ -276,7 +282,13 @@ def _simulate_position(
                 else float(bar["open"]) + spread_exit + slip
             )
             exit_time = time
-            exit_reason = "ROLLOVER_FLAT" if deadline == rollover else "MAX_HOLD"
+            exit_reason = (
+                "BIAS_FLIP"
+                if deadline == bias_deadline and bias_deadline < min(rollover, maximum)
+                else "ROLLOVER_FLAT"
+                if deadline == rollover
+                else "MAX_HOLD"
+            )
             break
         spread_exit = float(bar["spread"]) * point
         if direction > 0:

@@ -37,6 +37,12 @@ baselines negative after registered costs; Phase 05 tests whether the frozen
 fundamental permission filter adds enough value to become positive, not merely
 whether it reduces losses.
 
+Phase 05 found an interesting but non-promotable F2_T3 validation result:
++0.0979R/trade over 202 trades versus -0.1804R for T3. It breached the frozen
+drawdown gate, was negative throughout development, had a confidence interval
+crossing zero, and failed the five-point slippage stress. Therefore no candidate
+may enter the locked test and no demo/Telegram build is authorized by this run.
+
 See [the PRD](docs/PRD.md), [technical plan](docs/TECHNICAL_PLAN.md), and
 [research log](docs/RESEARCH_LOG.md).
 
